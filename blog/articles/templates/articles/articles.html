@@ -1,22 +1,16 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="{% static 'styles.css' %}" />
-    <title>لیست مقالات</title>
-  </head>
-  <body>
-    <h1 class="title">تمام مقالات</h1>
-    {% for article in articles %}
-    <div class="articles">
-      <h2>
-        <a href="{{ article.slug }}">{{ article.title }}</a>
-      </h2>
-      <p>{{ article.snippet }}</p>
-      <p>{{ article.date }}</p>
-    </div>
-      {% endfor %}
-  </body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}لیست مقالات{% endblock %}
+
+{% block content %}
+<h1 class="title">تمام مقالات</h1>
+{% for article in articles %}
+<div class="articles">
+  <h2>
+    <a href="{{ article.slug }}">{{ article.title }}</a>
+  </h2>
+  <p>{{ article.snippet }}</p>
+  <p>{{ article.date }}</p>
+</div>
+{% endfor %}
+{% endblock %}
