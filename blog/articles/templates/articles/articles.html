@@ -5,18 +5,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="{% static 'styles.css' %}" />
-    <title>Articles List</title>
+    <title>لیست مقالات</title>
   </head>
   <body>
-    <div class="container">
-      <h1>All Articles</h1>
-      {% for article in articles %}
+    <h1 class="title">تمام مقالات</h1>
+    {% for article in articles %}
+    <div class="articles">
       <h2>
-        <a href="#">{{ article.title }}</a>
+        <a href="{{ article.slug }}">{{ article.title }}</a>
       </h2>
       <p>{{ article.snippet }}</p>
       <p>{{ article.date }}</p>
-      {% endfor %}
     </div>
+      {% endfor %}
   </body>
 </html>
