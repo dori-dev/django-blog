@@ -6,7 +6,7 @@ class Article(models.Model):
     slug = models.SlugField()
     body: str = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
-    image = models.ImageField(default='default.png', blank=True)
+    image = models.ImageField(default='default.png')
     # author
 
     def snippet(self):

@@ -33,14 +33,14 @@ a:visited {
 .logo {
   position: fixed;
   top: 0px;
-  left: 10px;
+  left: 20px;
   font-size: 30px;
 }
 
 .date {
   position: fixed;
   top: 0px;
-  right: 10px;
+  right: 20px;
   font-size: 20px;
 }
 
