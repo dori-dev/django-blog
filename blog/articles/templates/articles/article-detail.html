@@ -3,14 +3,19 @@
 {% block title %}{{article.title}}{% endblock title %}
 
 {% block content %}
+<p class="date">{{article.date}}</p>
 <h1 class="title">
-    <a href="">{{article.title}}</a>
+    <a class="not-link" href="">{{article.title}}</a>
 </h1>
 <div>
-    <img src="" alt=""> 
+    <a target="_blank" href="{{ article.image.url }}">
+        <img src="{{ article.image.url }}" alt="{{ article.title }}" width="50%"> 
+    </a>
+    <br>
+    <br>
+    <br>
 </div>
 <div class="content">
     <p>{{article.body}}</p>
-    <p>{{article.date}}</p>
 </div>
 {% endblock content %}

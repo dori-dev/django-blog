@@ -7,9 +7,10 @@ body {
 }
 
 .title {
+  padding-top: 50px;
+  padding-bottom: 30px;
   font-weight: normal;
-  font-size: 65px;
-  padding-bottom: 50px;
+  font-size: 70px;
 }
 
 .articles {
@@ -30,6 +31,27 @@ a:visited {
 }
 
 .logo {
-  justify-content: left;
-  text-align: left;
+  position: fixed;
+  top: 0px;
+  left: 10px;
+  font-size: 30px;
+}
+
+.date {
+  position: fixed;
+  top: 0px;
+  right: 10px;
+  font-size: 20px;
+}
+
+.not-link {
+  color: black;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.not-link:hover,
+.not-link:visited {
+  color: black;
+  text-decoration: none;
 }
