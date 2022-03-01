@@ -28,3 +28,8 @@ a:visited {
   color: #0056b3;
   text-decoration: underline;
 }
+
+.logo {
+  justify-content: left;
+  text-align: left;
+}
