@@ -8,10 +8,11 @@ from django.conf.urls.static import static
 from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
     path("", views.main),
     path("about/", views.about),
     path("articles/", include("articles.urls")),
+    path("accounts/", include("accounts.urls"))
 ]
 
 urlpatterns += staticfiles_urlpatterns()
