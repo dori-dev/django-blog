@@ -4,7 +4,7 @@ from . import models
 
 def articles_list(request):
     """articles list"""
-    articles = list(reversed(models.Article.objects.all().order_by("date")))[:20]
+    articles = models.Article.objects.all().order_by("-date")[:20]
     args = {
         "articles": articles
     }
