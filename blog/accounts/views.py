@@ -10,9 +10,7 @@ def register_view(request):
             form.save()
             # login
             return redirect("articles:list")
-        # else:
-    else:
-        form = UserCreationForm()
+    form = UserCreationForm()
     arg: dict = {
         "form": form,
     }
@@ -27,9 +25,7 @@ def login_view(request):
         if form.is_valid():
             # login use
             return redirect("articles:list")
-        # else:
-    else:
-        form = AuthenticationForm()
+    form = AuthenticationForm()
     arg: dict = {
         "form": form,
     }
