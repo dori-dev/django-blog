@@ -1,13 +1,13 @@
-<!-- {% extends 'base.html' %}
+{% extends 'base.html' %}
 
 
 {% block title %}ورود{% endblock title %}
 
 {% block content %}
 <h1 class="title">ورود</h1>
-<form class="form" action="" method="post">
+<form class="form" action="{% url 'login' %}" method="post">
     {{ form }}
-    <input type="submit" name="" value="ورود">
+    {% csrf_token %}
+    <input type="submit" value="ورود">
 </form>
 {% endblock content %}
-     -->

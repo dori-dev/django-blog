@@ -10,10 +10,10 @@ def register_view(request):
             form.save()
             # login
             return redirect("articles:list")
-        # form = UserCreationForm()
+        # else:
     else:
         form = UserCreationForm()
-    arg = {
+    arg: dict = {
         "form": form,
     }
     return render(request, "accounts/register.html", arg)
@@ -22,3 +22,15 @@ def register_view(request):
 def login_view(request):
     """login view
     """
+    if request.method == "POST":
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            # login use
+            return redirect("articles:list")
+        # else:
+    else:
+        form = AuthenticationForm()
+    arg: dict = {
+        "form": form,
+    }
+    return render(request, "accounts/login.html", arg)
