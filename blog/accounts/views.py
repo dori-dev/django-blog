@@ -1,5 +1,8 @@
+"""accounts views
+"""
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth import login
 
 
 def register_view(request):
@@ -24,6 +27,8 @@ def login_view(request):
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
             # login use
+            user = form.get_user()
+            login(request, user)
             return redirect("articles:list")
     form = AuthenticationForm()
     arg: dict = {
