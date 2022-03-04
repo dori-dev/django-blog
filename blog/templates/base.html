@@ -11,6 +11,16 @@
     <p class="logo">
       <a href="{% url 'articles:list' %}">LOGO</a>
     </p>
+    <nav>
+      <ul>
+        <li>
+          <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="logout-buttonZ">logout</button>
+          </form>
+        </li>
+      </ul>
+    </nav>
     {% block content %}
     {% endblock %}
   </body>

@@ -2,7 +2,7 @@
 """
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
 
 
 def register_view(request):
@@ -34,3 +34,11 @@ def login_view(request):
         "form": form,
     }
     return render(request, "accounts/login.html", arg)
+
+
+def logout_view(request):
+    """logout view"""
+    if request.method == "POST":
+        logout(request)
+        return redirect("articles:list")
+    # return redirect("home")  # TODO
