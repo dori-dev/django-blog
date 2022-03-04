@@ -5,7 +5,7 @@
 
 {% block content %}
 <h1 class="title">ورود</h1>
-<form class="form" action="{% url 'login' %}" method="post">
+<form class="form" action="{% url 'accounts:login' %}" method="post">
     {{ form }}
     {% csrf_token %}
     <input type="submit" value="ورود">

@@ -1,12 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
     <title>Home Page</title>
   </head>
   <body>
     <h1>The Home</h1>
     <p>Welcome To My Blog</p>
+    <br>
+    <br>
+    <a href="{% url 'accounts:register' %}">register</a>
+    <br>
+    <a href="{% url 'accounts:login' %}">login</a>
+    <br>
+    <a href="{% url 'articles:list' %}">articles</a>
   </body>
 </html>
