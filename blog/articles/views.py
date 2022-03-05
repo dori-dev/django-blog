@@ -1,4 +1,5 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 from . import models
 
 
@@ -18,3 +19,9 @@ def article_detail(request, slug):
         "article": article
     }
     return render(request, "articles/article-detail.html", args)
+
+
+@login_required(login_url="accounts:login")
+def create_article(request):
+    """create article"""
+    return render(request, "articles/create-article.html")
