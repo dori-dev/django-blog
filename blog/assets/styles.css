@@ -1,9 +1,22 @@
+@font-face {
+  font-family: "IRAN Sans";
+  src: url("IRANSansWeb.woff2") format("woff2");
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: white;
   color: black;
   text-align: center;
   justify-content: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "IRAN Sans", sans-serif;
 }
 
 .title {
@@ -66,10 +79,32 @@ a:visited {
   text-decoration: none;
 }
 
-.home-link {
+.button-div {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.button {
+  backface-visibility: hidden;
+  background-color: #405cf5;
+  border-radius: 50px;
+  border-width: 0;
+  color: #fff;
+  cursor: pointer;
   font-size: 35px;
-  /* padding-top: 100px;
-  padding-bottom: 100px;
-  margin-bottom: 100px; */
-  margin-top: 45px;
+  height: 55px;
+  width: 350px;
+  line-height: 1.15;
+  outline: none;
+  text-transform: none;
+  touch-action: manipulation;
+}
+
+.button:disabled {
+  cursor: default;
+}
+
+.button:focus {
+  box-shadow: #32325d1a 0 0 0 1px inset, #32325d33 0 6px 15px 0,
+    #0000001a 0 2px 2px 0, #3297d34d 0 0 0 4px;
 }
