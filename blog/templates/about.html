@@ -1,12 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>About Me</title>
-  </head>
-  <body>
-    <h1>The About</h1>
-    <p>Iam Mohammad Dori, and welcome to my blog!</p>
-  </body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}درباره من{% endblock title %}
+
+{% block content %}
+<h1 class="title">درباره من</h1>
+<div class="about">
+  <p>سلام من محمد دری هستم سازنده این وبلاگ</p>
+  <p>به این وبلاگ خوش اومدی</p>
+  <p>خیلی خوشحالم که از سایت ما استفاده میکنی</p>
+</div>
+
+<div class="footer-basic">
+  <footer>
+    <p class="copyright-about">
+      <a href="https://github.com/dori-dev">محمد دری</a> - 2022
+    </p>
+    <p class="copyright-about">!کپی از مطالب کاملا آزاد است</p>
+    <p class="copyright-about">تلفن: <a href="tel:09013128010">09013128010</a></p>
+    <p class="copyright-about">
+      <a href="mailto:mr.dori.dev@gmail.com">mr.dori.dev@gmail.com</a>
+      :ایمیل
+    </p>
+    <p class="copyright-about">
+      <a href="https://github.com/dori-dev">https://github.com/dori-dev</a>
+      :گیت هاب
+    </p>
+  </footer>
+</div>
+
+{% endblock content %}
+  

@@ -37,7 +37,6 @@ body {
 }
 
 .warning {
-
   padding-bottom: 50px;
 }
 
@@ -112,4 +111,26 @@ a:visited {
 .button:focus {
   box-shadow: #32325d1a 0 0 0 1px inset, #32325d33 0 6px 15px 0,
     #0000001a 0 2px 2px 0, #3297d34d 0 0 0 4px;
+}
+
+.footer-basic {
+  padding: 30px 0;
+}
+
+.footer-basic .copyright {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.copyright-about {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.about {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
 }
