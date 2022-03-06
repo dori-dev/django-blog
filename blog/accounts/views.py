@@ -13,7 +13,8 @@ def register_view(request):
             user = form.save()
             login(request, user)
             return redirect("articles:list")
-    form = UserCreationForm()
+    else:
+        form = UserCreationForm()
     arg: dict = {
         "form": form,
     }
@@ -32,8 +33,14 @@ def login_view(request):
                 return redirect(request.POST.get('next'))
             return redirect("articles:list")
         if "next" in request.POST:
-            return redirect(f"/accounts/login?next={request.POST.get('next')}")
-    form = AuthenticationForm()
+            arg = {
+                "form": form,
+                "next": True,
+                "page": request.POST.get('next')
+            }
+            return render(request, "accounts/login.html", arg)
+    else:
+        form = AuthenticationForm()
     arg: dict = {
         "form": form,
     }

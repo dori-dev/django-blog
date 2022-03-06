@@ -8,10 +8,14 @@
     {{ form }}
     {% csrf_token %}
 
-    {% if request.GET.next %}
+    {% if request.GET.next%}
     <input type="hidden" name="next" value="{{ request.GET.next }}">
-
     {% endif %}
+
+    {% if next %}
+    <input type="hidden" name="next" value="{{ page }}">
+    {% endif %}
+        
 
     <input type="submit" value="ورود">
 
