@@ -17,11 +17,14 @@ def articles_list(request):
 
 def article_detail(request, slug):
     """article detail"""
-    article = models.Article.objects.get(slug=slug)
-    args = {
-        "article": article
-    }
-    return render(request, "articles/article-detail.html", args)
+    try:
+        article = models.Article.objects.get(slug=slug)
+        args = {
+            "article": article
+        }
+        return render(request, "articles/article-detail.html", args)
+    except:
+        return render(request, "error.html")
 
 
 @login_required(login_url="accounts:login")

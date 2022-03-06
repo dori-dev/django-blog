@@ -52,3 +52,7 @@ def logout_view(request):
     if request.method == "POST":
         logout(request)
         return redirect("home")
+
+def error(request, *args, **kwargs):
+    """error handler"""
+    return render(request, "error.html")
