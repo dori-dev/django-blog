@@ -2,6 +2,7 @@
 """
 
 from django.shortcuts import render
+from django.template import RequestContext
 
 
 def about(request):
@@ -15,3 +16,8 @@ def main(request):
         "name": request.user.username
     }
     return render(request, "home.html", args)
+
+
+def error(request, *args, **kwargs):
+    """error handler"""
+    return render(request, "error.html")
