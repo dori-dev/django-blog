@@ -28,7 +28,11 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
+            if "next" in request.POST:
+                return redirect(request.POST.get('next'))
             return redirect("articles:list")
+        if "next" in request.POST:
+            return redirect(f"/accounts/login?next={request.POST.get('next')}")
     form = AuthenticationForm()
     arg: dict = {
         "form": form,

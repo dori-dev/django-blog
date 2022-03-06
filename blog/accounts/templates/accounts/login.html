@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 
-
 {% block title %}ورود{% endblock title %}
 
 {% block content %}
@@ -8,6 +7,21 @@
 <form class="form" action="{% url 'accounts:login' %}" method="post">
     {{ form }}
     {% csrf_token %}
+
+    {% if request.GET.next %}
+    <input type="hidden" name="next" value="{{ request.GET.next }}">
+
+    {% endif %}
+
     <input type="submit" value="ورود">
+
+    <br>
+    <br>
+    <h2>اگر حساب کاربری ندارید ثبت نام کنید</h2>
+    <h2>
+        <a href="{% url 'accounts:register' %}">
+            برای ثبت نام کلیک کنید
+        </a>
+    </h2>
 </form>
 {% endblock content %}
