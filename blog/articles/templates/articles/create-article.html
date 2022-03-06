@@ -7,5 +7,10 @@
 {% block content %}
 <div class="create-article">
     <h1>مقاله مورد نظرت را ایجاد کن</h1>
+    <form class="create-article" action="{% url 'articles:create' %}" method="post" enctype="multipart/form-data">
+        {{ form }}
+        {% csrf_token %}
+        <input type="submit" value="ایجاد">
+    </form>
 </div>
 {% endblock content %}
