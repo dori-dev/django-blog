@@ -15,7 +15,7 @@ class Article(models.Model):
         return " ".join(self.body[:100].split()[:10]) + " ..."
 
     def get_date(self):
-        return humanize.naturaltime(self.date)
+        return humanize.naturaltime(self.date)  # TODO
 
     def __str__(self):
         return self.title
