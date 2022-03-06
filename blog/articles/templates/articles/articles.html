@@ -9,6 +9,9 @@
   <h2>
     <a href="{% url 'articles:detail' slug=article.slug %}">{{ article.title }}</a>
   </h2>
+  <a target="_blank" href="{{ article.image.url }}">
+    <img src="{{ article.image.url }}" alt="{{ article.title }}" width="15%"> 
+  </a>
   <p>{{ article.snippet }}</p>
   <p>{{ article.get_date }}</p>
   <p>{{ article.author }}</p>
