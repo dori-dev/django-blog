@@ -4,11 +4,17 @@
 
 {% block content %}
 <h1 class="title">ورود</h1>
+
+{% if next or request.GET.next %}
+    
+<h2 class="warning">برای ایجاد مقاله ابتدا باید وارد حساب کاربری شوید</h2>
+{% endif %}
+    
 <form class="form" action="{% url 'accounts:login' %}" method="post">
     {{ form }}
     {% csrf_token %}
 
-    {% if request.GET.next%}
+    {% if request.GET.next %}
     <input type="hidden" name="next" value="{{ request.GET.next }}">
     {% endif %}
 

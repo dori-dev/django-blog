@@ -36,8 +36,13 @@ body {
   padding-bottom: 60px;
 }
 
+.warning {
+
+  padding-bottom: 50px;
+}
+
 .articles {
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   font-size: 20px;
 }
 
