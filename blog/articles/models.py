@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import User
+from django.contrib.humanize.templatetags import humanize
 
 
 class Article(models.Model):
@@ -7,10 +9,13 @@ class Article(models.Model):
     body: str = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
     image = models.ImageField(default='default.png')
-    # author
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def snippet(self):
-        return " ".join(self.body[:80].split()[:10]) + " ..."
+        return " ".join(self.body[:100].split()[:10]) + " ..."
+
+    def get_date(self):
+        return humanize.naturaltime(self.date)
 
     def __str__(self):
         return self.title

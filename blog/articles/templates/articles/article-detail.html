@@ -3,13 +3,13 @@
 {% block title %}{{article.title}}{% endblock title %}
 
 {% block content %}
-<p class="date">{{article.date}}</p>
+<p class="date">{{article.get_date}} | {{ article.author }}</p>
 <h1 class="title">
     <a class="not-link" href="">{{article.title}}</a>
 </h1>
 <div>
     <a target="_blank" href="{{ article.image.url }}">
-        <img src="{{ article.image.url }}" alt="{{ article.title }}" width="50%"> 
+        <img src="{{ article.image.url }}" alt="{{ article.title }}" width="40%"> 
     </a>
     <br>
     <br>
@@ -18,4 +18,7 @@
 <div class="content">
     <p>{{article.body}}</p>
 </div>
+<br>
+<br>
+<br>
 {% endblock content %}
