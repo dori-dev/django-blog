@@ -11,4 +11,7 @@ def about(request):
 
 def main(request):
     """main page"""
-    return render(request, "home.html")
+    args = {
+        "name": request.user.username
+    }
+    return render(request, "home.html", args)

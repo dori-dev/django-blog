@@ -13,6 +13,16 @@ body {
   font-size: 70px;
 }
 
+.base-title {
+  font-weight: normal;
+  font-size: 75px;
+}
+
+.welcome {
+  font-size: 30px;
+  padding-bottom: 60px;
+}
+
 .articles {
   padding-bottom: 30px;
   font-size: 20px;
@@ -54,4 +64,12 @@ a:visited {
 .not-link:visited {
   color: black;
   text-decoration: none;
+}
+
+.home-link {
+  font-size: 35px;
+  /* padding-top: 100px;
+  padding-bottom: 100px;
+  margin-bottom: 100px; */
+  margin-top: 45px;
 }

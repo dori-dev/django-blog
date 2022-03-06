@@ -8,16 +8,30 @@
     <title>Home Page</title>
   </head>
   <body>
-    <h1>The Home</h1>
-    <p>Welcome To My Blog</p>
-    <br>
-    <br>
-    <a href="{% url 'accounts:register' %}">register</a>
-    <br>
-    <a href="{% url 'accounts:login' %}">login</a>
-    <br>
-    <a href="{% url 'articles:list' %}">articles</a>
-    <br>
-    <a href="{% url 'articles:create' %}">create</a>
+    <nav>
+      <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="logout-buttonZ">logout</button>
+      </form>
+    </nav>
+    <h1 class="base-title">خانه</h1>
+    {% if name%}
+    <p class="welcome">خوش اومدی <a href="{% url 'articles:create' %}">{{name}}</a></p>
+    {% else %}
+    <p class="welcome">به وبلاگ من خوش آمدی</p>
+    {% endif %}
+
+    <div class="home-link">
+      <a href="{% url 'accounts:register' %}">ثبت نام</a>
+    </div>
+    <div class="home-link">
+      <a href="{% url 'accounts:login' %}">ورود</a>
+    </div>
+    <div class="home-link">
+      <a href="{% url 'articles:list' %}">لیست مقالات</a>
+    </div>
+    <div class="home-link">
+      <a href="{% url 'articles:create' %}">ایجاد مقاله</a>
+    </div>
   </body>
 </html>

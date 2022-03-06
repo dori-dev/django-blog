@@ -12,14 +12,10 @@
       <a href="{% url 'home' %}">LOGO</a>
     </p>
     <nav>
-      <ul>
-        <li>
           <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
             {% csrf_token %}
             <button type="submit" class="logout-buttonZ">logout</button>
           </form>
-        </li>
-      </ul>
     </nav>
     {% block content %}
     {% endblock %}

@@ -44,5 +44,4 @@ def logout_view(request):
     """logout view"""
     if request.method == "POST":
         logout(request)
-        return redirect("articles:list")
-    # return redirect("home")  # TODO
+        return redirect("home")
