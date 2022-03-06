@@ -17,16 +17,6 @@
     {% endif %}
 
     <div class="button-div">
-      <form action="{% url 'accounts:register' %}">
-        <button class="button">ثبت نام</button>
-      </form>
-    </div>
-    <div class="button-div">
-      <form action="{% url 'accounts:login' %}">
-        <button class="button">ورود</button>
-      </form>
-    </div>
-    <div class="button-div">
       <form action="{% url 'articles:list' %}">
         <button class="button">لیست مقالات</button>
       </form>
@@ -37,13 +27,27 @@
       <button class="button">ایجاد مقاله</button>
     </form>
     </div>
-
+    
+    
+    {% if user.is_authenticated %}
     <div class="button-div">
       <form action="{% url 'accounts:logout' %}" method="post">
         {% csrf_token %}
         <button type="submit" class="button">خروج از حساب</button>
       </form>
     </div>
-
+    {% else %}
+    <div class="button-div">
+      <form action="{% url 'accounts:register' %}">
+        <button class="button">ثبت نام</button>
+      </form>
+    </div>
+    <div class="button-div">
+      <form action="{% url 'accounts:login' %}">
+        <button class="button">ورود</button>
+      </form>
+    </div>
+    {% endif %}
+    
   </body>
 </html>
