@@ -17,7 +17,7 @@ class Article(models.Model):
         return " ".join(self.body[:70].split()[:-1]) + " ..."
 
     def get_date(self):
-        time = humanize.naturaltime(self.date).replace(",", " and").replace(".", "")
+        time = humanize.naturaltime(self.date).replace(",", " and").replace(".", "").replace("،", " and ")
         return " ".join(_(word) for word in time.split())
 
     def get_title(self):
