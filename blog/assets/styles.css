@@ -40,6 +40,12 @@ body {
   padding-bottom: 50px;
 }
 
+.content-body {
+  padding: 80px 100px;
+  padding-top: 100px;
+  direction: rtl;
+}
+
 .articles {
   padding-bottom: 60px;
   font-size: 20px;
@@ -88,6 +94,7 @@ a:visited {
   padding-bottom: 60px;
   font-weight: normal;
   font-size: 50px;
+  direction: rtl;
 }
 
 .not-link,
@@ -144,4 +151,8 @@ a:visited {
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 18px;
+}
+
+.info {
+  padding-top: 15px;
 }

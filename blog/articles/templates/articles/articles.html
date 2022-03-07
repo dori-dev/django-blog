@@ -15,8 +15,10 @@
     <img src="{{ article.image.url }}" alt="{{ article.title }}" width="35%"> 
   </a>
   <p class="summery-body">{{ article.snippet }}</p>
-  <p><b>{{ article.get_date }}</b></p>
-  <p><b>{{ article.author.username }}</b></p>
+  <div class="info">
+    <p><b>{{ article.get_date }}</b></p>
+    <p><b>{{ article.author.username }}</b></p>
+  </div>
 </div>
 {% endfor %}
 
