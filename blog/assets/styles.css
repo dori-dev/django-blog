@@ -17,17 +17,71 @@ body {
   text-align: center;
   justify-content: center;
   font-family: "IRAN Sans", sans-serif;
+  font-weight: normal;
 }
 
-.title {
-  padding-top: 50px;
-  padding-bottom: 30px;
-  font-weight: normal;
-  font-size: 70px;
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
 }
 
-.base-title {
-  font-weight: normal;
+a:hover,
+a:visited {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Buttons */
+
+.button {
+  backface-visibility: hidden;
+  background-color: #405cf5;
+  border-radius: 50px;
+  border-width: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 35px;
+  height: 55px;
+  width: 350px;
+  line-height: 1.15;
+  outline: none;
+  text-transform: none;
+  touch-action: manipulation;
+  font-family: "IRAN Sans";
+}
+
+.button:focus {
+  box-shadow: #32325d1a 0 0 0 1px inset, #32325d33 0 6px 15px 0,
+    #0000001a 0 2px 2px 0, #3297d34d 0 0 0 4px;
+}
+
+/* Site Logo */
+
+.logo {
+  margin-top: 10px;
+  position: fixed;
+  top: 0px;
+  left: 20px;
+  font-size: 30px;
+}
+
+/* Footer */
+
+.footer-basic {
+  padding: 30px 0;
+}
+
+.footer-basic .copyright {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+/* Home Page */
+
+.home-title {
   font-size: 75px;
 }
 
@@ -37,14 +91,17 @@ body {
   padding-bottom: 60px;
 }
 
-.warning {
-  padding-bottom: 50px;
+.button-div {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.content-body {
-  padding: 80px 100px;
-  padding-top: 100px;
-  direction: rtl;
+/* Articles List */
+
+.title {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  font-size: 70px;
 }
 
 .articles {
@@ -63,24 +120,9 @@ body {
   direction: rtl;
 }
 
-a {
-  color: #007bff;
-  text-decoration: none;
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects;
-}
-a:hover,
-a:visited {
-  color: #0056b3;
-  text-decoration: underline;
-}
-
-.logo {
-  margin-top: 10px;
-  position: fixed;
-  top: 0px;
-  left: 20px;
-  font-size: 30px;
+.info {
+  padding-top: 15px;
+  direction: rtl;
 }
 
 .date {
@@ -91,56 +133,35 @@ a:visited {
   direction: rtl;
 }
 
+/* Article Detail */
+
 .small-title {
   padding-top: 100px;
   padding-bottom: 60px;
-  font-weight: normal;
   font-size: 50px;
   direction: rtl;
 }
 
-.not-link,
-.not-link:hover,
-.not-link:visited {
+.content-body {
+  padding: 80px 100px;
+  padding-top: 100px;
+  direction: rtl;
+}
+
+.link-title,
+.link-title:hover,
+.link-title:visited {
   color: black;
   text-decoration: none;
   background-color: transparent;
 }
 
-.button-div {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
+/* About Page */
 
-.button {
-  backface-visibility: hidden;
-  background-color: #405cf5;
-  border-radius: 50px;
-  border-width: 0;
-  color: #fff;
-  cursor: pointer;
-  font-size: 35px;
-  height: 55px;
-  width: 350px;
-  line-height: 1.15;
-  outline: none;
-  text-transform: none;
-  touch-action: manipulation;
-}
-
-.button:focus {
-  box-shadow: #32325d1a 0 0 0 1px inset, #32325d33 0 6px 15px 0,
-    #0000001a 0 2px 2px 0, #3297d34d 0 0 0 4px;
-}
-
-.footer-basic {
-  padding: 30px 0;
-}
-
-.footer-basic .copyright {
-  text-align: center;
+.about {
   margin-top: 10px;
-  font-size: 15px;
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .copyright-about {
@@ -149,13 +170,112 @@ a:visited {
   font-size: 20px;
 }
 
-.about {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 18px;
+/* Forms  */
+
+.warning {
+  padding-bottom: 50px;
 }
 
-.info {
-  padding-top: 15px;
+.create-form {
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.create-form input,
+.create-form textarea {
+  margin-left: 25%;
+  margin-bottom: 50px;
+  display: block;
+  width: 50%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid #405cf5;
+  font-size: 20px;
   direction: rtl;
+}
+
+.create-form input:focus,
+.create-form textarea:focus {
+  border-color: blue;
+  outline: 0;
+}
+
+.create-form #id_slug {
+  direction: ltr;
+}
+
+#id_image::file-selector-button {
+  margin-left: 20px;
+  direction: ltr;
+  cursor: pointer;
+  border: 0px solid #6c5ce7;
+  border-radius: 20px;
+  background-color: #6c5ce7;
+  font-size: 30px;
+  transition: 0.3s;
+  color: #fff;
+  padding: 8px 10px;
+  transition: 0.3s;
+}
+
+#id_image::file-selector-button:hover {
+  box-shadow: #32325d1a 0 0 0 1px inset, #32325d33 0 6px 15px 0,
+    #0000001a 0 2px 2px 0, #6907da4d 0 0 0 3px;
+}
+
+#id_image::file-selector-button:active {
+  background-color: #00cec9;
+}
+
+#id_image::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+#id_image::before {
+  content: "یک تصویر انتخاب کنید";
+  display: inline-block;
+  background-color: #6c5ce7;
+  border-radius: 50px;
+  border-width: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 25px;
+  padding: 5px 8px;
+  font-family: "IRAN Sans";
+  transition: 0.3s;
+}
+
+#id_image:hover::before {
+  box-shadow: #32325d1a 0 0 0 1px inset, #32325d33 0 6px 15px 0,
+    #0000001a 0 2px 2px 0, #6907da4d 0 0 0 3px;
+}
+
+#id_image:active::before {
+  background: #a29bfe;
+}
+
+.create-form label {
+  font-size: 0px;
+  display: block;
+}
+
+.create-form label:before {
+  font-size: 30px;
+  direction: rtl;
+}
+
+.create-form label[for="id_title"]:before {
+  content: "عنوان ";
+}
+
+.create-form label[for="id_slug"]:before {
+  content: "آدرس ";
+}
+
+.create-form label[for="id_body"]:before {
+  content: "متن ";
+}
+
+.create-form label[for="id_image"]:before {
+  content: "تصویر ";
 }

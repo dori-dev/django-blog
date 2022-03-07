@@ -6,11 +6,13 @@
 
 {% block content %}
 <div class="create-article">
-    <h1>مقاله مورد نظرت را ایجاد کن</h1>
-    <form class="create-article" action="{% url 'articles:create' %}" method="post" enctype="multipart/form-data">
+    <h1 class="small-title">مقاله مورد نظرت را ایجاد کن</h1>
+    <form class="create-form" action="{% url 'articles:create' %}" method="post" enctype="multipart/form-data">
         {{ form }}
         {% csrf_token %}
-        <input type="submit" value="ایجاد">
+        <div class="button-div">
+              <button class="button" style="margin-top: 40px;">ایجاد</button>
+        </div>
     </form>
 </div>
 {% endblock content %}

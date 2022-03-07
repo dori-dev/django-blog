@@ -4,12 +4,13 @@ from django.contrib.auth.models import User
 from django.contrib.humanize.templatetags import humanize
 from django.utils.translation import gettext as _
 
+# TODO fix to name of articles and pictures
 class Article(models.Model):
-    title: str = models.CharField(max_length=256)
-    slug = models.SlugField()
-    body: str = models.TextField()
+    title: str = models.CharField("عنوان", max_length=256)
+    slug = models.SlugField("آدرس")
+    body: str = models.TextField("متن")
     date = models.DateTimeField(auto_now_add=True)
-    image = models.ImageField(default='default.png')
+    image = models.ImageField("عکس", default='default.png')
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def snippet(self):

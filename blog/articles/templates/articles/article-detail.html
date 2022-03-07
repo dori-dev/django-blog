@@ -6,7 +6,7 @@
 {% block content %}
 <p class="date">{{article.get_date}} | {{ article.author.username }}</p>
 <h1 class="small-title">
-    <a class="not-link" href="">{{article.title}}</a>
+    <a class="link-title" href="">{{article.title}}</a>
 </h1>
 <div>
     <a target="_blank" href="{{ article.image.url }}">
