@@ -3,7 +3,7 @@
 {% block title %}{{article.title}}{% endblock title %}
 
 {% block content %}
-<p class="date">{{article.get_date}} | {{ article.author }}</p>
+<p class="date">{{article.get_date}} | {{ article.author.username }}</p>
 <h1 class="title">
     <a class="not-link" href="">{{article.title}}</a>
 </h1>
