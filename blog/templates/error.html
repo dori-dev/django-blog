@@ -16,7 +16,7 @@
         width: 100%;
         height: 100%;
         overflow: hidden;
-        background-color: #405cf5;
+        background-color: #00a2ff;
         font-family: "IRAN Sans", sans-serif;
         color: #fff;
       }
@@ -42,12 +42,48 @@
         margin: 8px 0 38px 0;
         font-weight: bold;
       }
+
+      a,
+      a:hover,
+      a:visited {
+        color: #fff;
+        background-color: transparent;
+        text-decoration: underline;
+        -webkit-text-decoration-skip: objects;
+      }
+
+
+      .button {
+        backface-visibility: hidden;
+        background-color: #2b4af7;
+        border-radius: 50px;
+        border-width: 0;
+        color: #fff;
+        cursor: pointer;
+        font-size: 35px;
+        height: 55px;
+        width: 350px;
+        line-height: 1.15;
+        outline: none;
+        text-transform: none;
+        touch-action: manipulation;
+      }
+
+      .button:focus {
+        box-shadow: #32325d1a 0 0 0 1px inset, #32325d33 0 6px 15px 0,
+          #0000001a 0 2px 2px 0, #3297d34d 0 0 0 4px;
+      }
     </style>
   </head>
   <body>
     <div class="error">
       <h1>404</h1>
       <p>متاسفیم، صفحه مورد نظر یافت نشد</p>
+      <div class="button-div">
+        <form action="{% url 'home' %}">
+          <button class="button">بازگشت به خانه</button>
+        </form>
+      </div>      
     </div>
   </body>
 </html>

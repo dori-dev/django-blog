@@ -10,7 +10,9 @@
   </head>
   <body>
     <p class="logo">
-      <a href="{% url 'home' %}">LOGO</a>
+      <a href="{% url 'home' %}">
+        <img style="border-radius: 50px;" src="{% static 'home.png' %}" alt="logo">
+      </a>
     </p>
     {% block content %}
     {% endblock %}
