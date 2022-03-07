@@ -2,7 +2,7 @@
 
 Create simple blog with django
 
-- [ ] TODO add random number for slug :)
-- [ ] TODO custom label, errormessage and helptext :)
-- [ ] TODO add news page
-- [ ] TODO add TODO page
+- [ ] add random number for slug :)
+- [ ] custom label, errormessage and helptext :)
+- [ ] add news page
+- [ ] add TODO page
