@@ -5,21 +5,20 @@
 {% block content %}
 <h1 class="title">تمام مقالات</h1>
 
-<div class="content">
-  {% for article in articles %}
-  <div class="articles">
-    <h2>
-      <a href="{% url 'articles:detail' slug=article.slug %}">{{ article.title }}</a>
-    </h2>
-    <a target="_blank" href="{% url 'articles:detail' slug=article.slug %}">
-      <img src="{{ article.image.url }}" alt="{{ article.title }}" width="30%"> 
-    </a>
-    <p>{{ article.snippet }}</p>
-    <p>{{ article.get_date }}</p>
-    <p>{{ article.author.username }}</p>
-  </div>
-  {% endfor %}
+
+{% for article in articles %}
+<div class="articles">
+  <h2>
+    <a href="{% url 'articles:detail' slug=article.slug %}">{{ article.get_title | linebreaks }}</a>
+  </h2>
+  <a target="_blank" href="{% url 'articles:detail' slug=article.slug %}">
+    <img src="{{ article.image.url }}" alt="{{ article.title }}" width="35%"> 
+  </a>
+  <p class="summery-body">{{ article.snippet }}</p>
+  <p><b>{{ article.get_date }}</b></p>
+  <p><b>{{ article.author.username }}</b></p>
 </div>
+{% endfor %}
 
 <br>
 <hr style="color: #aaa8a8" />

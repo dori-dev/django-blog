@@ -1,3 +1,4 @@
+from textwrap import wrap
 from django.db import models
 from django.contrib.auth.models import User
 from django.contrib.humanize.templatetags import humanize
@@ -12,10 +13,13 @@ class Article(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def snippet(self):
-        return " ".join(self.body[:50].split()[:10]) + " ..."
+        return " ".join(self.body[:70].split()[:-1]) + " ..."
 
     def get_date(self):
         return humanize.naturaltime(self.date)  # TODO
+
+    def get_title(self):
+        return "\n".join(wrap(self.title, width=50))
 
     def __str__(self):
         return self.title
