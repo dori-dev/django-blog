@@ -2,7 +2,7 @@ from textwrap import wrap
 from django.db import models
 from django.contrib.auth.models import User
 from django.contrib.humanize.templatetags import humanize
-
+from django.utils.translation import gettext as _
 
 class Article(models.Model):
     title: str = models.CharField(max_length=256)
@@ -16,10 +16,12 @@ class Article(models.Model):
         return " ".join(self.body[:70].split()[:-1]) + " ..."
 
     def get_date(self):
-        return humanize.naturaltime(self.date)  # TODO
+        time = humanize.naturaltime(self.date).replace(",", " and").replace(".", "")
+        return " ".join(_(word) for word in time.split())
 
     def get_title(self):
         return "\n".join(wrap(self.title, width=50))
 
     def __str__(self):
         return self.title
+    

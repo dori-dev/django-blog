@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-07 16:38+0330\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: articles/templates/articles/articles.html:9
+msgid "now"
+msgstr "الان"
+
+#: articles/templates/articles/articles.html:9
+msgid "seconds"
+msgstr "ثانیه"
+
+#: articles/templates/articles/articles.html:9
+msgid "second"
+msgstr "ثانیه"
+
+#: articles/templates/articles/articles.html:9
+msgid "ago"
+msgstr "پیش"
+
+#: articles/templates/articles/articles.html:9
+msgid "minute"
+msgstr "دقیقه"
+
+#: articles/templates/articles/articles.html:9
+msgid "minutes"
+msgstr "دقیقه"
+
+#: articles/templates/articles/articles.html:9
+msgid "a"
+msgstr "یک"
+
+#: articles/templates/articles/articles.html:9
+msgid "an"
+msgstr "یک"
+
+#: articles/templates/articles/articles.html:9
+msgid "hour"
+msgstr "ساعت"
+
+#: articles/templates/articles/articles.html:9
+msgid "hours"
+msgstr "ساعت"
+
+#: articles/templates/articles/articles.html:9
+msgid "day"
+msgstr "روز"
+
+#: articles/templates/articles/articles.html:9
+msgid "days"
+msgstr "روز"
+
+#: articles/templates/articles/articles.html:9
+msgid "from"
+msgstr "از"
+
+#: articles/templates/articles/articles.html:9
+msgid "week"
+msgstr "هفته"
+
+#: articles/templates/articles/articles.html:9
+msgid "weeks"
+msgstr "هفته"
+
+#: articles/templates/articles/articles.html:9
+msgid "month"
+msgstr "ماه"
+
+#: articles/templates/articles/articles.html:9
+msgid "months"
+msgstr "ماه"
+
+#: articles/templates/articles/articles.html:9
+msgid "year"
+msgstr "سال"
+
+#: articles/templates/articles/articles.html:9
+msgid "years"
+msgstr "سال"
+
+#: articles/templates/articles/articles.html:9
+msgid "and"
+msgstr "و"

@@ -32,6 +32,7 @@ body {
 }
 
 .welcome {
+  direction: rtl;
   font-size: 30px;
   padding-bottom: 60px;
 }
@@ -87,6 +88,7 @@ a:visited {
   top: 0px;
   right: 20px;
   font-size: 20px;
+  direction: rtl;
 }
 
 .small-title {
@@ -155,4 +157,5 @@ a:visited {
 
 .info {
   padding-top: 15px;
+  direction: rtl;
 }
