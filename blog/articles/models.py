@@ -12,7 +12,7 @@ class Article(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def snippet(self):
-        return " ".join(self.body[:100].split()[:10]) + " ..."
+        return " ".join(self.body[:50].split()[:10]) + " ..."
 
     def get_date(self):
         return humanize.naturaltime(self.date)  # TODO

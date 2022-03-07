@@ -45,6 +45,18 @@ body {
   font-size: 20px;
 }
 
+.content {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  position: relative;
+}
+
+.content h2 {
+  font-size: 40px;
+}
+
 a {
   color: #007bff;
   text-decoration: none;
