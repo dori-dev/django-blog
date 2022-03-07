@@ -3,9 +3,11 @@
  
 {% block content %}
 <h1 class="title">ثبت نام</h1>
-<form class="form" action="{% url 'accounts:register' %}" method="post">
+<form class="register-form" action="{% url 'accounts:register' %}" method="post">
   {{ form }} 
   {% csrf_token %}
-  <input type="submit"  value="ثبت نام" />
+  <div class="button-div">
+    <button class="button" style="margin-top: 40px;">ثبت نام</button>
+  </div>
 </form>
 {% endblock content %}

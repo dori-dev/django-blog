@@ -170,11 +170,7 @@ a:visited {
   font-size: 20px;
 }
 
-/* Forms  */
-
-.warning {
-  padding-bottom: 50px;
-}
+/* Create Article Forms  */
 
 .create-form {
   margin-top: 40px;
@@ -278,4 +274,70 @@ a:visited {
 
 .create-form label[for="id_image"]:before {
   content: "تصویر ";
+}
+
+/* Register Form */
+
+.register-form {
+  padding: 20px;
+}
+
+.register-form input,
+.register-form textarea {
+  margin-left: 25%;
+  display: block;
+  width: 50%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid #405cf5;
+  font-size: 20px;
+  direction: rtl;
+}
+
+.register-form input:focus,
+.register-form textarea:focus {
+  border-color: blue;
+  outline: 0;
+}
+
+.helptext,
+.helptext ul {
+  margin-top: -10px;
+  color: #181717;
+  font-size: 15px;
+  direction: rtl;
+  display: block;
+  list-style-type: none;
+}
+
+.errorlist li {
+  color: #d0342c;
+  padding: 12px;
+  list-style-type: none;
+  direction: rtl;
+  font-weight: 700;
+}
+
+/* .helptext {
+  font-size: 0px;
+}
+
+.helptext::before {
+  font-size: 30px;
+  content: "یسبمتبیسب ";
+  direction: rtl;
+  color: red;
+} */
+
+.register-form label {
+  padding-top: 60px;
+  font-size: 30px;
+  display: block;
+  direction: rtl;
+}
+
+/* Login Form */
+
+.warning {
+  padding-bottom: 50px;
 }
