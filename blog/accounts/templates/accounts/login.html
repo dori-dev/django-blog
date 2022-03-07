@@ -10,7 +10,7 @@
 <h2 class="warning">برای ایجاد مقاله ابتدا باید وارد حساب کاربری شوید</h2>
 {% endif %}
     
-<form class="form" action="{% url 'accounts:login' %}" method="post">
+<form class="auth-form" action="{% url 'accounts:login' %}" method="post">
     {{ form }}
     {% csrf_token %}
 
@@ -23,7 +23,9 @@
     {% endif %}
         
 
-    <input type="submit" value="ورود">
+    <div class="button-div">
+        <button class="button" style="margin-top: 40px;">ورود</button>
+      </div>
 
     <br>
     <br>

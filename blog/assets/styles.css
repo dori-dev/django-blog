@@ -276,14 +276,14 @@ a:visited {
   content: "تصویر ";
 }
 
-/* Register Form */
+/* Register and Login Form */
 
-.register-form {
+.auth-form {
   padding: 20px;
 }
 
-.register-form input,
-.register-form textarea {
+.auth-form input,
+.auth-form textarea {
   margin-left: 25%;
   display: block;
   width: 50%;
@@ -294,8 +294,8 @@ a:visited {
   direction: rtl;
 }
 
-.register-form input:focus,
-.register-form textarea:focus {
+.auth-form input:focus,
+.auth-form textarea:focus {
   border-color: blue;
   outline: 0;
 }
@@ -312,7 +312,7 @@ a:visited {
 
 .errorlist li {
   color: #d0342c;
-  padding: 12px;
+  padding-top: 4px;
   list-style-type: none;
   direction: rtl;
   font-weight: 700;
@@ -329,14 +329,12 @@ a:visited {
   color: red;
 } */
 
-.register-form label {
+.auth-form label {
   padding-top: 60px;
   font-size: 30px;
   display: block;
   direction: rtl;
 }
-
-/* Login Form */
 
 .warning {
   padding-bottom: 50px;
