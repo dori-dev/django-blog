@@ -125,14 +125,6 @@ a:visited {
   direction: rtl;
 }
 
-.date {
-  position: fixed;
-  top: 0px;
-  right: 20px;
-  font-size: 20px;
-  direction: rtl;
-}
-
 /* Article Detail */
 
 .small-title {
@@ -154,6 +146,14 @@ a:visited {
   color: black;
   text-decoration: none;
   background-color: transparent;
+}
+
+.date {
+  position: fixed;
+  top: 0px;
+  right: 20px;
+  font-size: 20px;
+  direction: rtl;
 }
 
 /* About Page */
@@ -342,4 +342,18 @@ a:visited {
 
 .login input {
   direction: ltr;
+}
+
+/* News Page */
+
+.news-content {
+  margin: 120px 100px;
+}
+
+.news-title {
+  margin-bottom: 30px;
+}
+
+.news {
+  padding: 0 100px 120px 100px;
 }

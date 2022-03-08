@@ -1,29 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>اخبار</title>
-    <style>
-      body {
-        direction: rtl;
-      }
-    </style>
-  </head>
-  <body>
-    {% for new in news %}
-      <a href="{{ new.link }}">
-        <h1>{{ new.title }}</h1>
-      </a>
-      <a href="{{ new.link }}">
-        <img src="{{ new.img }}" alt="" width="30%" />
-      </a>
-      <p>{{ new.desc }}</p>
-      <p>{{ new.date }}</p>
-      <br />
-      <br />
-      <br />
-    {% endfor %}
-  </body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}آخرین اخبار{% endblock title %}
+
+{% block content %}
+
+<style>
+  body {
+    direction: rtl;
+  }
+</style>
+</head>
+<body>
+  <div class="news-content">
+{% for new in news %}
+<div class="news">
+  <a class="link-title" target="_blank" href="{{ new.link }}">
+    <h1 class="news-title">{{ new.title }}</h1>
+  </a>
+  <a target="_blank" href="{{ new.link }}">
+    <img src="{{ new.img }}" alt="" width="45%" />
+  </a>
+  <p>{{ new.desc }}</p>
+  <p class="info"><b>{{ new.date }}</b></p>
+</div>
+{% endfor %}
+</div>
+
+{% endblock content %}
+  
