@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 {% block title %}ایجاد مقاله{% endblock title %}
 
@@ -15,4 +15,5 @@
         </div>
     </form>
 </div>
+<script src="{% static 'slugify.js' %}"></script>
 {% endblock content %}

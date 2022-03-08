@@ -339,3 +339,7 @@ a:visited {
 .warning {
   padding-bottom: 50px;
 }
+
+.login input {
+  direction: ltr;
+}

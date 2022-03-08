@@ -5,9 +5,11 @@ from django.contrib.humanize.templatetags import humanize
 from django.utils.translation import gettext as _
 
 # TODO fix to name of articles and pictures
+
+
 class Article(models.Model):
     title: str = models.CharField("عنوان", max_length=256)
-    slug = models.SlugField("آدرس")
+    slug = models.SlugField("آدرس", unique=True, allow_unicode=True)
     body: str = models.TextField("متن")
     date = models.DateTimeField(auto_now_add=True)
     image = models.ImageField("عکس", default='default.png')
@@ -17,7 +19,8 @@ class Article(models.Model):
         return " ".join(self.body[:70].split()[:-1]) + " ..."
 
     def get_date(self):
-        time = humanize.naturaltime(self.date).replace(",", " and").replace(".", "").replace("،", " and ")
+        time = humanize.naturaltime(self.date).replace(
+            ",", " and").replace(".", "").replace("،", " and ")
         return " ".join(_(word) for word in time.split())
 
     def get_title(self):
@@ -25,4 +28,3 @@ class Article(models.Model):
 
     def __str__(self):
         return self.title
-    

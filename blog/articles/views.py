@@ -2,6 +2,7 @@
 """
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from django.utils.crypto import get_random_string
 from . import models
 from . import forms
 
@@ -35,6 +36,15 @@ def create_article(request):
         if form.is_valid():
             instance = form.save(commit=False)
             instance.author = request.user
+            new_slug = f"{instance.slug}-{get_random_string(5, '0123456789')}"
+            have_slug = True
+            while have_slug:
+                have_slug = False
+                other_slug = models.Article.objects.filter(slug=new_slug)
+                if len(other_slug) > 0:
+                    have_slug = True
+                    new_slug = f"{instance.slug}-{get_random_string(5, '0123456789')}"
+            instance.slug = new_slug
             instance.save()
             return redirect("articles:list")
     else:
