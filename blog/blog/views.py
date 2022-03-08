@@ -2,7 +2,7 @@
 """
 
 from django.shortcuts import render
-from django.template import RequestContext
+from . import irna
 
 
 def about(request):
@@ -16,6 +16,20 @@ def main(request):
         "name": request.user.username
     }
     return render(request, "home.html", args)
+
+
+def news(request):
+    """news page"""
+    data = irna.main()
+    args = {
+        "news": data,
+        "title": "title",
+        "link": "link",
+        "desc": "desc",
+        "data": "data",
+        "img": "img",
+    }
+    return render(request, "news.html", args)
 
 
 def error(request, *args, **kwargs):
