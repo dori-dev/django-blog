@@ -6,3 +6,6 @@ Create simple blog with django
 - [ ] custom label, errormessage and helptext :)
 - [ ] add news page
 - [ ] add TODO page
+- [ ] make fake user and articles with selenium
+- [ ] add fake article in admin panel for easy select author
+- [ ] apply test on blog
