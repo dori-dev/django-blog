@@ -1,10 +1,10 @@
+"""article modles
+"""
 from textwrap import wrap
 from django.db import models
 from django.contrib.auth.models import User
 from django.contrib.humanize.templatetags import humanize
 from django.utils.translation import gettext as _
-
-# TODO fix to name of articles and pictures
 
 
 class Article(models.Model):
@@ -16,15 +16,21 @@ class Article(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def snippet(self):
-        return " ".join(self.body[:70].split()[:-1]) + " ..."
+        return wrap(self.body[:70], width=60)[0] + " ..."
 
     def get_date(self):
-        time = humanize.naturaltime(self.date).\
+        time = humanize.naturaltime(self.date)
+        if time in ["now", "الان"]:
+            return "الان"
+        time = time.\
             replace(",", " and").\
             replace(".", "").\
             replace("،", " and ").\
             replace("ها", "").\
-            replace("  ", " ")
+            replace("  ", " ").\
+            replace("ago", "")
+        time = time.split("and")[0].strip()
+        time = f"{time} ago"
         return " ".join(_(word) for word in time.split())
 
     def get_title(self):
