@@ -9,7 +9,7 @@ from . import forms
 
 def articles_list(request):
     """articles list"""
-    articles = models.Article.objects.all().order_by("-date")[:20]
+    articles = models.Article.objects.all().order_by("-date")[:50]
     args = {
         "articles": articles
     }
