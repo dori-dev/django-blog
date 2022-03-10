@@ -3,15 +3,43 @@
 {% block title %}ورود{% endblock title %}
 
 {% block content %}
-<h1 class="title">ورود</h1>
+<h1 class="page-label">ورود</h1>
 
 {% if next or request.GET.next %}
-    
+<!-- TODO bootstrap style for this  -->
 <h2 class="warning">برای ایجاد مقاله ابتدا باید وارد حساب کاربری شوید</h2>
 {% endif %}
     
 <form class="auth-form login" action="{% url 'accounts:login' %}" method="post">
-    {{ form }}
+    {% if form.errors %}
+    <div class="error">
+        <ul class="errorlist">
+            <li>
+                <ul class="errorlist">
+                    <li>لطفا یک نام کاربری و رمز عبور صحیح وارد کنید. به حروف کوچک و بزرگ توجه کنید.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    {% else %}
+    <div class="error"></div>
+    {% endif %}
+    
+            
+    <div class="input-container">
+        <label for="">نام کاربری</label>
+        <input type="text" autofocus autocapitalize="none" autocomplete="username" class="form-control" name="username" maxlength="150" required id="id_username" placeholder="نام کاربری خود را وارد کنید">
+    </div>
+    <div class="input-container">
+        <label for="">رمز عبور</label>
+        <input class="form-control" type="password" name="password" autocomplete="current-password" required id="id_password" placeholder="رمز عبور خود را وارد کنید">
+    </div>
+    {% csrf_token %}
+    <button class="btn btn-primary auth-btn neighbor-btn">ورود به سایت</button>
+    <a href="{% url 'accounts:register' %}">
+        <button type="button" class="btn btn-success auth-btn">ساخت حساب</button>
+    </a>
+
     {% csrf_token %}
 
     {% if request.GET.next %}
@@ -21,11 +49,7 @@
     {% if next %}
     <input type="hidden" name="next" value="{{ page }}">
     {% endif %}
-        
 
-    <div class="button-div">
-        <button class="button" style="margin-top: 40px;">ورود</button>
-      </div>
 
     <br>
     <br>
