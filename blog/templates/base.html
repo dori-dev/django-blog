@@ -16,36 +16,41 @@
     <!-- TODO change nav style and responsive it -->
     <nav style="font-size: 20px;" class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a style="font-size: 30px;" class="navbar-brand" href="{% url 'home' %}">خانه</a>
+        <a style="font-size: 30px;" class="navbar-brand" href="{% url 'home' %}">صفحه اصلی</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{% url 'articles:list' %}">لیست مقالات</a>
+              <a class="nav-link active custom-nav" aria-current="page" href="{% url 'articles:list' %}">لیست مقالات</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{% url 'articles:create' %}">ایجاد مقاله</a>
+              <a class="nav-link active custom-nav" aria-current="page" href="{% url 'articles:create' %}">ایجاد مقاله</a>
             </li>
-  
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="#">contact us</a>
-            </li> -->
-  
+            <li class="nav-item">
+              <a class="nav-link active custom-nav" aria-current="page" href="{% url 'news' %}">آخرین آخبار</a>
+            </li>
+            <!-- TODO -->
+            <li class="nav-item">
+              <a class="nav-link active custom-nav" aria-current="page" href="">مدیریت کارها</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active custom-nav" aria-current="page" href="{% url 'about' %}">درباره من</a>
+            </li>
             {% if user.is_authenticated %}
             <form action="{% url 'accounts:logout' %}" method="post">
               {% csrf_token %}
               <li class="nav-item">
-                <button style="color: #494949;" class="btn nav-link">خروج از حساب</button>
+                <button class="btn nav-link active custom-nav" aria-current="page" style="color: #333333; font-size: large;">خروج از حساب</button>
               </li>
             </form>
             {% else %}
             <li class="nav-item">
-              <a style="color: #494949;" class="nav-link" href="{% url 'accounts:register' %}">ثبت نام</a>
+              <a style="color: #494949;" class="nav-link active custom-nav" aria-current="page" href="{% url 'accounts:register' %}">ثبت نام</a>
             </li>
             <li class="nav-item">
-              <a style="color: #494949;" class="nav-link" href="{% url 'accounts:login' %}">ورود</a>
+              <a style="color: #494949;" class="nav-link active custom-nav" aria-current="page" href="{% url 'accounts:login' %}">ورود</a>
             </li>
             {% endif %}
     

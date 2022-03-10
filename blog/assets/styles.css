@@ -290,3 +290,9 @@ a:visited {
 .mrt {
   margin-top: 15px;
 }
+
+
+.custom-nav {
+  margin-left: 3px;
+  /* font-size: 20px; */
+}
