@@ -10,7 +10,7 @@
 <h2 class="warning">برای ایجاد مقاله ابتدا باید وارد حساب کاربری شوید</h2>
 {% endif %}
     
-<form class="auth-form login" action="{% url 'accounts:login' %}" method="post">
+<form class="auth-form" action="{% url 'accounts:login' %}" method="post">
     {% if form.errors %}
     <div class="error">
         <ul class="errorlist">
@@ -30,15 +30,13 @@
         <label for="">نام کاربری</label>
         <input type="text" class="form-control" autofocus autocapitalize="none" autocomplete="username" name="username" maxlength="150" required id="id_username" placeholder="نام کاربری خود را وارد کنید">
     </div>
-    <div class="input-container">
+    <div style="margin-top: 20px;" class="input-container">
         <label for="">رمز عبور</label>
         <input type="password" class="form-control" name="password" autocomplete="current-password" required id="id_password" placeholder="رمز عبور خود را وارد کنید">
     </div>
     {% csrf_token %}
-    <button class="btn btn-primary auth-btn neighbor-btn">ورود به سایت</button>
-    <a href="{% url 'accounts:register' %}">
-        <button type="button" class="btn btn-success auth-btn">ساخت حساب</button>
-    </a>
+    <button class="btn btn-primary auth-btn neighbor-btn">ورود</button>
+
 
     {% csrf_token %}
 
@@ -49,15 +47,12 @@
     {% if next %}
     <input type="hidden" name="next" value="{{ page }}">
     {% endif %}
-
-
     <br>
-    <br>
-    <h2>اگر حساب کاربری ندارید ثبت نام کنید</h2>
-    <h2>
+    <div style="margin-top: 60px;">
+        <h3 style="margin-bottom: 15px;">اگر حساب کاربری <b>ندارید</b> در سایت ثبت نام کنید</h3>
         <a href="{% url 'accounts:register' %}">
-            برای ثبت نام کلیک کنید
+            <button type="button" class="btn btn-success large-btn">ثبت نام در سایت</button>
         </a>
-    </h2>
+    </div>
 </form>
 {% endblock content %}

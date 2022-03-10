@@ -38,11 +38,14 @@
         </ur>
     </span>
   </div>
-  <button class="btn btn-primary auth-btn neighbor-btn">ثبت نام حساب</button>
-  <a href="{% url 'accounts:login' %}">
-      <button type="button" class="btn btn-success auth-btn">ورود به حساب</button>
-  </a>
+  <button class="btn btn-primary auth-btn neighbor-btn">ثبت نام</button>
 
+  <div style="margin-top: 60px;">
+    <h3 style="margin-bottom: 15px;">اگر حساب کاربری <b>دارید</b> وارد حساب تان شوید</h3>
+    <a href="{% url 'accounts:login' %}">
+        <button type="button" class="btn btn-success large-btn">ورود به حساب</button>
+    </a>
+  </div>
   {% csrf_token %}
 </form>
 {% endblock content %}
