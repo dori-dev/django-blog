@@ -88,7 +88,6 @@ a:visited {
 .articles h2 {
   margin-top: 40px;
   font-size: 35px;
-  direction: rtl;
   margin-bottom: 10px;
 }
 
@@ -118,16 +117,43 @@ a:visited {
 /* Article Detail */
 
 .small-title {
-  padding-top: 100px;
-  padding-bottom: 60px;
-  font-size: 50px;
-  direction: rtl;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  font-size: 30px;
+}
+
+.content {
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+}
+
+.content img {
+  border-radius: 10px;
+  border: 1px solid #acacac;
+  width: 80%;
 }
 
 .content-body {
-  padding: 80px 100px;
-  padding-top: 100px;
-  direction: rtl;
+  padding: 40px 1rem;
+  padding-top: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .small-title {
+    padding-top: 70px;
+    padding-bottom: 60px;
+    font-size: 50px;
+  }
+  .content img {
+    border-radius: 10px;
+    border: 1px solid #acacac;
+    width: 60%;
+  }
+  .content-body {
+    padding: 40px 1rem;
+    padding-top: 80px;
+  }
 }
 
 .link-title,
@@ -138,13 +164,13 @@ a:visited {
   background-color: transparent;
 }
 
-.date {
-  position: fixed;
-  top: 0px;
-  right: 20px;
+/* .date {
+  text-align: center;
+  margin-right: 10px;
+  padding-top: 0px;
+  line-height: normal;
   font-size: 20px;
-  direction: rtl;
-}
+} */
 
 /* About Page */
 
@@ -217,7 +243,6 @@ a:visited {
   margin-top: 5px;
   color: #181717;
   font-size: 15px;
-  direction: rtl;
   display: block;
   list-style-type: none;
 }

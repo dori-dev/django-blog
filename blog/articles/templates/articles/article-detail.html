@@ -5,18 +5,23 @@
 
 {% block content %}
 <p class="date">{{article.get_date}} | {{ article.author.username }}</p>
+
+<div class="content">
+
 <h1 class="small-title">
-    <a class="link-title" href="">{{article.title}}</a>
+  <a class="link-title" href="">{{article.title}}</a>
 </h1>
 <div>
-    <a target="_blank" href="{{ article.image.url }}">
-        <img src="{{ article.image.url }}" alt="{{ article.title }}" width="40%"> 
-    </a>
+  <a target="_blank" href="{{ article.image.url }}">
+      <img src="{{ article.image.url }}" alt="{{ article.title }}" width="80%"> 
+  </a>
 </div>
 <div class="content-body">
-    <p>{{article.body | linebreaks}}</p>
+  <p>{{article.body | linebreaks}}</p>
 </div>
-<hr style="color: #aaa8a8" />
+</div>
+
+<hr style="color: #464646;" />
 <div class="footer-basic">
   <footer>
     <p class="copyright">
