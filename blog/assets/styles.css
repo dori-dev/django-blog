@@ -278,6 +278,10 @@ a:visited {
   margin-bottom: 100px;
 }
 
+.errorlist li {
+  font-size: 0px;
+}
+
 .error {
   margin-bottom: 30px;
 }
@@ -315,7 +319,15 @@ a:visited {
   font-size: 18px;
 }
 
-
+.helptext,
+.helptext ul {
+  margin-top: 5px;
+  color: #181717;
+  font-size: 15px;
+  direction: rtl;
+  display: block;
+  list-style-type: none;
+}
 
 
 
@@ -354,33 +366,13 @@ a:visited {
   outline: 0;
 } */
 
-.helptext,
-.helptext ul {
-  margin-top: -10px;
-  color: #181717;
-  font-size: 15px;
-  direction: rtl;
-  display: block;
-  list-style-type: none;
-}
 
-.errorlist li {
+/* .errorlist li {
   color: #d0342c;
   padding-top: 4px;
   list-style-type: none;
   direction: rtl;
   font-weight: 700;
-}
-
-/* .helptext {
-  font-size: 0px;
-}
-
-.helptext::before {
-  font-size: 30px;
-  content: "یسبمتبیسب ";
-  direction: rtl;
-  color: red;
 } */
 
 /* .auth-form label {

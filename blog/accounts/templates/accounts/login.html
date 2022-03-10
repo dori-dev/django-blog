@@ -28,11 +28,11 @@
             
     <div class="input-container">
         <label for="">نام کاربری</label>
-        <input type="text" autofocus autocapitalize="none" autocomplete="username" class="form-control" name="username" maxlength="150" required id="id_username" placeholder="نام کاربری خود را وارد کنید">
+        <input type="text" class="form-control" autofocus autocapitalize="none" autocomplete="username" name="username" maxlength="150" required id="id_username" placeholder="نام کاربری خود را وارد کنید">
     </div>
     <div class="input-container">
         <label for="">رمز عبور</label>
-        <input class="form-control" type="password" name="password" autocomplete="current-password" required id="id_password" placeholder="رمز عبور خود را وارد کنید">
+        <input type="password" class="form-control" name="password" autocomplete="current-password" required id="id_password" placeholder="رمز عبور خود را وارد کنید">
     </div>
     {% csrf_token %}
     <button class="btn btn-primary auth-btn neighbor-btn">ورود به سایت</button>
