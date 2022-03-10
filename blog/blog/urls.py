@@ -15,7 +15,7 @@ urlpatterns = [
     path("articles/", include("articles.urls")),
     path("accounts/", include("accounts.urls")),
     path("news/", views.news, name="news"),
-    path("<slug>", views.error),
+    path("<slug>/", views.error),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
