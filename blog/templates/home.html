@@ -6,8 +6,8 @@
 {% block content %}
 
 <h1 class="home-title">خانه</h1>
-{% if name%}
-<p class="welcome">سلام <a href="{% url 'articles:create' %}">{{name}}</a> عزیز</p>
+{% if user.is_authenticated %}
+<p class="welcome">سلام <a href="{% url 'articles:create' %}">{{ user }}</a> عزیز</p>
 {% else %}
 <p class="welcome">به وبلاگ من خوش اومدی</p>
 {% endif %}

@@ -12,10 +12,7 @@ def about(request):
 
 def main(request):
     """main page"""
-    args = {
-        "name": request.user.username
-    }
-    return render(request, "home.html", args)
+    return render(request, "home.html")
 
 
 def news(request):
