@@ -164,13 +164,11 @@ a:visited {
   background-color: transparent;
 }
 
-/* .date {
-  text-align: center;
-  margin-right: 10px;
-  padding-top: 0px;
-  line-height: normal;
-  font-size: 20px;
-} */
+.date {
+  margin-top: 10px;
+  margin-bottom: -10px;
+  font-size: 18px;
+}
 
 /* About Page */
 

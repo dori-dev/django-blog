@@ -1,27 +1,30 @@
 {% extends 'base.html' %}
 {% load i18n %}
 
-{% block title %}{{article.title}}{% endblock title %}
+{% block title %}{{article.title}}{%endblock title %}
 
 {% block content %}
-<p class="date">{{article.get_date}} | {{ article.author.username }}</p>
 
 <div class="content">
+  <p class="date">{{article.get_date}}، توسط {{ article.author.username }}</p>
+  <h1 class="small-title">
+    <a class="link-title" href="">{{article.title}}</a>
+  </h1>
+  <div>
+    <a target="_blank" href="{{ article.image.url }}">
+      <img
+        src="{{ article.image.url }}"
+        alt="{{ article.title }}"
+        width="80%"
+      />
+    </a>
+  </div>
+  <div class="content-body">
+    <p>{{article.body | linebreaks}}</p>
+  </div>
+</div>
 
-<h1 class="small-title">
-  <a class="link-title" href="">{{article.title}}</a>
-</h1>
-<div>
-  <a target="_blank" href="{{ article.image.url }}">
-      <img src="{{ article.image.url }}" alt="{{ article.title }}" width="80%"> 
-  </a>
-</div>
-<div class="content-body">
-  <p>{{article.body | linebreaks}}</p>
-</div>
-</div>
-
-<hr style="color: #464646;" />
+<hr style="color: #464646" />
 <div class="footer-basic">
   <footer>
     <p class="copyright">
