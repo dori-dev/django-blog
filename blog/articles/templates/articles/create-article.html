@@ -25,14 +25,14 @@
 
         <div class="input-container mrt">
             <label for="id_image">عکس</label>
-            <input type="file" class="form-control form-control-lg" name="image" accept="image/*" id="id_image">
+            <label id="upload_label" for="id_image" class="btn btn-secondary">برای انتخاب عکس کلیک کن</label>
+            <input type="file" style="visibility:hidden;" class="form-control form-control-lg" name="image" accept="image/*" id="id_image">
         </div>
 
         {% csrf_token %}
         <div class="button-div">
-              <button class="btn btn-primary btn-lg" style="margin-top: 40px;">ایجاد و ذخیره مقاله</button>
+              <button class="btn btn-primary btn-lg">ایجاد و ذخیره مقاله</button>
         </div>
-
     </form>
 </div>
 <script src="{% static 'slugify.js' %}"></script>
