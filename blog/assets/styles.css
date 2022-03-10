@@ -57,16 +57,6 @@ a:visited {
     #0000001a 0 2px 2px 0, #3297d34d 0 0 0 4px;
 }
 
-/* Site Logo */
-
-.logo {
-  margin-top: 10px;
-  position: fixed;
-  top: 0px;
-  left: 20px;
-  font-size: 30px;
-}
-
 /* Footer */
 
 .footer-basic {
