@@ -14,7 +14,8 @@ const slugify = (val) => {
     .replace(/^-+/g, "")
     .replace(/-+$/g, "")
     .replace(/x/g, "")
-    .replace(/x/g, "");
+    .replace(/x/g, "")
+    .slice(0, 50);
 };
 
 titleInput.addEventListener("keyup", (e) => {

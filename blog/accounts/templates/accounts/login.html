@@ -25,11 +25,16 @@
     <div class="error"></div>
     {% endif %}
     
-            
+    
     <div class="input-container">
         <label for="">نام کاربری</label>
+        {% if form.username.value %}
+        <input type="text" class="form-control" value="{{ form.username.value }}" autofocus autocapitalize="none" autocomplete="username" name="username" maxlength="150" required id="id_username" placeholder="نام کاربری خود را وارد کنید">
+        {% else %}
         <input type="text" class="form-control" autofocus autocapitalize="none" autocomplete="username" name="username" maxlength="150" required id="id_username" placeholder="نام کاربری خود را وارد کنید">
+        {% endif %}
     </div>
+            
     <div style="margin-top: 20px;" class="input-container">
         <label for="">رمز عبور</label>
         <input type="password" class="form-control" name="password" autocomplete="current-password" required id="id_password" placeholder="رمز عبور خود را وارد کنید">

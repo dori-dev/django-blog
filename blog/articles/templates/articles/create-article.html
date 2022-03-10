@@ -6,21 +6,45 @@
 
 {% block content %}
 <div class="container create-form-container">
+    {% if form.errors %}
+    <div class="error">
+        <ul class="errorlist">
+            <li>
+                <ul class="errorlist">
+                    <li>لطفا یک "لینک" معتبر وارد کنید که شامل حروف فارسی و انگلیسی، اعداد و خط فاصله باشد.</li>
+                    <li>همچنین اگر "عکسی" انتخاب کرده بودید دوباره انتخاب کنید.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    {% endif %}
     <h1 class="page-label">مقاله مورد نظرت را ایجاد کن</h1>
     <form class="create-form" action="{% url 'articles:create' %}" method="post" enctype="multipart/form-data">
         <div class="input-container mrt">
             <label for="id_title">عنوان مقاله</label>
-            <input type="text" class="form-control" name="title" maxlength="256" required id="id_title" placeholder="برای مثال رمز ارز های چگونه پدید آمدند...">
+            {% if form.title.value %}
+            <input type="text" class="form-control" value="{{ form.title.value }}" name="title" maxlength="256" autofocus required id="id_title" placeholder="برای مثال رمز ارز های چگونه پدید آمدند...">
+            {% else %}
+            <input type="text" class="form-control" name="title" maxlength="256" autofocus required id="id_title" placeholder="برای مثال رمز ارز های چگونه پدید آمدند...">
+            {% endif %}
         </div>
 
         <div class="input-container mrt">
             <label for="id_slug">لینک</label>
+            {% if form.slug.value %}
+            <input type="text" class="form-control" value="{{ form.slug.value }}" name="slug" maxlength="50" required id="id_slug" placeholder="آدرس مقاله با توجه به عنوان نوشته میشود که میتونی عوضش کنی!">
+            {% else %}
             <input type="text" class="form-control" name="slug" maxlength="50" required id="id_slug" placeholder="آدرس مقاله با توجه به عنوان نوشته میشود که میتونی عوضش کنی!">
+            {% endif %} 
         </div>
 
         <div class="input-container mrt">
             <label for="id_body">متن مقاله</label>
+            {% if form.body.value %}
+            <textarea name="body" class="form-control" cols="40" rows="10" required id="id_body" placeholder="توضیحات و متنی که دوست داری رو اینجا بنویس :)">{{ form.body.value }}</textarea>
+            {% else %}
             <textarea name="body" class="form-control" cols="40" rows="10" required id="id_body" placeholder="توضیحات و متنی که دوست داری رو اینجا بنویس :)"></textarea>
+            {% endif %}
         </div>
 
         <div class="input-container mrt">
