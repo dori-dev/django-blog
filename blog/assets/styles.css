@@ -33,30 +33,6 @@ a:visited {
   text-decoration: underline;
 }
 
-/* Buttons */
-
-.button {
-  backface-visibility: hidden;
-  background-color: #405cf5;
-  border-radius: 50px;
-  border-width: 0;
-  color: #fff;
-  cursor: pointer;
-  font-size: 35px;
-  height: 55px;
-  width: 350px;
-  line-height: 1.15;
-  outline: none;
-  text-transform: none;
-  touch-action: manipulation;
-  font-family: "IRAN Sans";
-}
-
-.button:focus {
-  box-shadow: #32325d1a 0 0 0 1px inset, #32325d33 0 6px 15px 0,
-    #0000001a 0 2px 2px 0, #3297d34d 0 0 0 4px;
-}
-
 /* Footer */
 
 .footer-basic {
@@ -76,14 +52,31 @@ a:visited {
 }
 
 .welcome {
-  direction: rtl;
   font-size: 30px;
+}
+
+.hint {
   padding-bottom: 60px;
+  font-size: 30px;
+}
+
+
+.home-btn {
+  backface-visibility: hidden;
+  /* background-color: #405cf5; */
+  border-radius: 10px;
+  font-size: 35px;
+  height: 55px;
+  width: 300px;
+  line-height: 1.15;
+  outline: none;
+  text-transform: none;
+  touch-action: manipulation;
 }
 
 .button-div {
   /* padding-top: 20px; */
-  padding-bottom: 100px;
+  padding-bottom: 28px;
 }
 
 /* Articles List */
@@ -160,83 +153,6 @@ a:visited {
   font-size: 20px;
 }
 
-/* Create Article Forms  */
-
-/* .create-form {
-  margin-top: 40px;
-  padding: 20px;
-}
-
-.create-form input,
-.create-form textarea {
-  margin-left: 25%;
-  margin-bottom: 50px;
-  display: block;
-  width: 50%;
-  padding: 10px;
-  border-radius: 20px;
-  border: 2px solid #405cf5;
-  font-size: 20px;
-  direction: rtl;
-}
-
-.create-form input:focus,
-.create-form textarea:focus {
-  border-color: blue;
-  outline: 0;
-} */
-
-
-/* #id_image::file-selector-button {
-  margin-left: 20px;
-  direction: ltr;
-  cursor: pointer;
-  border: 0px solid #6c5ce7;
-  border-radius: 20px;
-  background-color: #6c5ce7;
-  font-size: 30px;
-  transition: 0.3s;
-  color: #fff;
-  padding: 8px 10px;
-  transition: 0.3s;
-}
-
-#id_image::file-selector-button:hover {
-  box-shadow: #32325d1a 0 0 0 1px inset, #32325d33 0 6px 15px 0,
-    #0000001a 0 2px 2px 0, #6907da4d 0 0 0 3px;
-}
-
-#id_image::file-selector-button:active {
-  background-color: #00cec9;
-}
-
-#id_image::-webkit-file-upload-button {
-  visibility: hidden;
-}
-
-#id_image::before {
-  content: "یک تصویر انتخاب کنید";
-  display: inline-block;
-  background-color: #6c5ce7;
-  border-radius: 50px;
-  border-width: 0;
-  color: #fff;
-  cursor: pointer;
-  font-size: 25px;
-  padding: 5px 8px;
-  font-family: "IRAN Sans";
-  transition: 0.3s;
-}
-
-#id_image:hover::before {
-  box-shadow: #32325d1a 0 0 0 1px inset, #32325d33 0 6px 15px 0,
-    #0000001a 0 2px 2px 0, #6907da4d 0 0 0 3px;
-}
-
-#id_image:active::before {
-  background: #a29bfe;
-} */
-
 /* Register and Login Form */
 
 .page-label {
@@ -300,11 +216,6 @@ a:visited {
   list-style-type: none;
 }
 
-
-
-
-
-
 .create-form-container {
   display: flex;
   flex-direction: column;
@@ -319,67 +230,6 @@ a:visited {
   display: flex;
   flex-wrap: wrap;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-.auth-form {
-  padding: 20px;
-}
-
-.auth-form input,
-.auth-form textarea {
-  margin-left: 25%;
-  display: block;
-  width: 50%;
-  padding: 10px;
-  border-radius: 20px;
-  border: 2px solid #405cf5;
-  font-size: 20px;
-  direction: rtl;
-}
-
-.auth-form input:focus,
-.auth-form textarea:focus {
-  border-color: blue;
-  outline: 0;
-} */
-
-
-/* .errorlist li {
-  color: #d0342c;
-  padding-top: 4px;
-  list-style-type: none;
-  direction: rtl;
-  font-weight: 700;
-} */
-
-/* .auth-form label {
-  padding-top: 60px;
-  font-size: 30px;
-  display: block;
-  direction: rtl;
-} */
 
 .warning {
   padding-bottom: 50px;
@@ -399,7 +249,6 @@ a:visited {
 .news {
   padding: 0 100px 120px 100px;
 }
-
 
 .mrt {
   margin-top: 15px;

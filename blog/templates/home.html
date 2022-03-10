@@ -9,30 +9,31 @@
 {% if name%}
 <p class="welcome">سلام <a href="{% url 'articles:create' %}">{{name}}</a> عزیز</p>
 {% else %}
-<p class="welcome">به وبلاگ من خوش آمدی</p>
+<p class="welcome">به وبلاگ من خوش اومدی</p>
 {% endif %}
+<p class="hint">از لیست زیر صفحه دلخواه ات را انتخاب کن :)</p>
 
 <div class="button-div">
   <form action="{% url 'articles:list' %}">
-    <button class="button">لیست مقالات</button>
+    <button class="btn btn-primary home-btn">لیست مقالات</button>
   </form>
 </div>
 
 <div class="button-div">
   <form action="{% url 'articles:create' %}">
-  <button class="button">ایجاد مقاله</button>
+  <button class="btn btn-primary home-btn">ایجاد مقاله</button>
 </form>
 </div>
 
 <div class="button-div">
   <form action="{% url 'news' %}">
-  <button class="button">آخرین اخبار</button>
+  <button class="btn btn-primary home-btn">آخرین اخبار</button>
 </form>
 </div>
 
 <div class="button-div">
   <form action="{% url 'about' %}">
-    <button class="button">درباره من</button>
+    <button class="btn btn-primary home-btn">درباره من</button>
   </form>
 </div>
 
@@ -40,20 +41,21 @@
 <div class="button-div">
   <form action="{% url 'accounts:logout' %}" method="post">
     {% csrf_token %}
-    <button type="submit" class="button">خروج از حساب</button>
+    <button type="submit" class="btn btn-primary home-btn">خروج از حساب</button>
   </form>
 </div>
 {% else %}
 <div class="button-div">
   <form action="{% url 'accounts:register' %}">
-    <button class="button">ثبت نام</button>
+    <button class="btn btn-primary home-btn">ثبت نام</button>
   </form>
 </div>
 <div class="button-div">
   <form action="{% url 'accounts:login' %}">
-    <button class="button">ورود</button>
+    <button class="btn btn-primary home-btn">ورود</button>
   </form>
 </div>
 {% endif %}
-
+<br>
+<br>
 {% endblock content %}
