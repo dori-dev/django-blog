@@ -53,13 +53,3 @@ def create_article(request):
         "form": form
     }
     return render(request, "articles/create-article.html", arg)
-
-
-def delete_articles(request, slug):
-    """delete articles"""
-    pass  # TODO
-
-
-def edit_articles(request, slug):
-    """edit articles"""
-    pass  # TODO
