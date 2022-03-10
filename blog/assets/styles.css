@@ -82,8 +82,8 @@ a:visited {
 }
 
 .button-div {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  /* padding-top: 20px; */
+  padding-bottom: 100px;
 }
 
 /* Articles List */
@@ -162,7 +162,7 @@ a:visited {
 
 /* Create Article Forms  */
 
-.create-form {
+/* .create-form {
   margin-top: 40px;
   padding: 20px;
 }
@@ -184,13 +184,10 @@ a:visited {
 .create-form textarea:focus {
   border-color: blue;
   outline: 0;
-}
+} */
 
-.create-form #id_slug {
-  direction: ltr;
-}
 
-#id_image::file-selector-button {
+/* #id_image::file-selector-button {
   margin-left: 20px;
   direction: ltr;
   cursor: pointer;
@@ -238,33 +235,7 @@ a:visited {
 
 #id_image:active::before {
   background: #a29bfe;
-}
-
-.create-form label {
-  font-size: 0px;
-  display: block;
-}
-
-.create-form label:before {
-  font-size: 30px;
-  direction: rtl;
-}
-
-.create-form label[for="id_title"]:before {
-  content: "عنوان ";
-}
-
-.create-form label[for="id_slug"]:before {
-  content: "آدرس ";
-}
-
-.create-form label[for="id_body"]:before {
-  content: "متن ";
-}
-
-.create-form label[for="id_image"]:before {
-  content: "تصویر ";
-}
+} */
 
 /* Register and Login Form */
 
@@ -334,6 +305,34 @@ a:visited {
 
 
 
+.create-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+  width: 70%;
+  padding-top: 30px;
+}
+
+.create-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -387,10 +386,6 @@ a:visited {
   color: #d0342c;
 }
 
-.login input {
-  direction: ltr;
-}
-
 /* News Page */
 
 .news-content {
@@ -403,4 +398,9 @@ a:visited {
 
 .news {
   padding: 0 100px 120px 100px;
+}
+
+
+.mrt {
+  margin-top: 15px;
 }

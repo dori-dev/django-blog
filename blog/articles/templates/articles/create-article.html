@@ -5,14 +5,34 @@
 
 
 {% block content %}
-<div class="create-article">
-    <h1 class="small-title">مقاله مورد نظرت را ایجاد کن</h1>
+<div class="container create-form-container">
+    <h1 class="page-label">مقاله مورد نظرت را ایجاد کن</h1>
     <form class="create-form" action="{% url 'articles:create' %}" method="post" enctype="multipart/form-data">
-        {{ form }}
+        <div class="input-container mrt">
+            <label for="id_title">عنوان مقاله</label>
+            <input type="text" class="form-control" name="title" maxlength="256" required id="id_title" placeholder="برای مثال رمز ارز های چگونه پدید آمدند...">
+        </div>
+
+        <div class="input-container mrt">
+            <label for="id_slug">لینک</label>
+            <input type="text" class="form-control" name="slug" maxlength="50" required id="id_slug" placeholder="آدرس مقاله با توجه به عنوان نوشته میشود که میتونی عوضش کنی!">
+        </div>
+
+        <div class="input-container mrt">
+            <label for="id_body">متن مقاله</label>
+            <textarea name="body" class="form-control" cols="40" rows="10" required id="id_body" placeholder="توضیحات و متنی که دوست داری رو اینجا بنویس :)"></textarea>
+        </div>
+
+        <div class="input-container mrt">
+            <label for="id_image">عکس</label>
+            <input type="file" class="form-control form-control-lg" name="image" accept="image/*" id="id_image">
+        </div>
+
         {% csrf_token %}
         <div class="button-div">
-              <button class="button" style="margin-top: 40px;">ایجاد</button>
+              <button class="btn btn-primary btn-lg" style="margin-top: 40px;">ایجاد و ذخیره مقاله</button>
         </div>
+
     </form>
 </div>
 <script src="{% static 'slugify.js' %}"></script>
