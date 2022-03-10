@@ -4,7 +4,7 @@
 {% block title %}لیست مقالات{% endblock %}
 
 {% block content %}
-<h1 class="page-label">آخرین مقالات</h1>
+<h1 style="font-size: 50px;" class="page-label">آخرین مقالات</h1>
 
 {% for article in articles %}
 <div class="articles">
@@ -12,12 +12,11 @@
     <a href="{% url 'articles:detail' slug=article.slug %}">{{ article.get_title | linebreaks }}</a>
   </h2>
   <a target="_blank" href="{% url 'articles:detail' slug=article.slug %}">
-    <img src="{{ article.image.url }}" alt="{{ article.title }}" width="35%"> 
+    <img class="thumbnail-img" src="{{ article.image.url }}" alt="{{ article.title }}"> 
   </a>
   <p class="summery-body">{{ article.snippet }}</p>
   <div class="info">
-    <p><b>{{ article.get_date }}</b></p>
-    <p><b>{{ article.author.username }}</b></p>
+    <p><b>{{ article.get_date }} | {{ article.author.username }}</b></p>
   </div>
 </div>
 {% endfor %}

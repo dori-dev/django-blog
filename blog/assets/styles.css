@@ -60,7 +60,6 @@ a:visited {
   font-size: 30px;
 }
 
-
 .home-btn {
   backface-visibility: hidden;
   /* background-color: #405cf5; */
@@ -81,7 +80,6 @@ a:visited {
 
 /* Articles List */
 
-
 .articles {
   padding-bottom: 60px;
   font-size: 20px;
@@ -95,12 +93,26 @@ a:visited {
 }
 
 .summery-body {
-  direction: rtl;
+  color: #363636;
+}
+
+.thumbnail-img {
+  border-radius: 10px;
+  border: 1px solid #acacac;
+  width: 70%;
+}
+
+@media only screen and (min-width: 768px) {
+  .thumbnail-img {
+    border-radius: 10px;
+    border: 1px solid #acacac;
+    width: 45%;
+  }
 }
 
 .info {
-  padding-top: 15px;
-  direction: rtl;
+  padding-top: 5px;
+  font-weight: normal;
 }
 
 /* Article Detail */
