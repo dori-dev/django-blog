@@ -5,12 +5,12 @@
 {% block content %}
 <div class="news-content">
 {% for new in news %}
-<div class="news">
+<div>
   <a class="link-title" target="_blank" href="{{ new.link }}">
     <h1 class="news-title">{{ new.title }}</h1>
   </a>
   <a target="_blank" href="{{ new.link }}">
-    <img src="{{ new.img }}" alt="" width="45%" />
+    <img class="news-img" src="{{ new.img }}" alt="" width="45%" />
   </a>
   <p>{{ new.desc }}</p>
   <p class="info"><b>{{ new.date }}</b></p>
@@ -18,7 +18,7 @@
 {% endfor %}
 </div>
 
-<hr style="color: #464646; margin-top: -150px;" />
+<hr style="color: #464646; margin-top: 50px;" />
 <div class="footer-basic">
   <footer>
     <p class="copyright">

@@ -268,15 +268,23 @@ a:visited {
 /* News Page */
 
 .news-content {
-  margin: 120px 100px;
+  margin: 0px 10px;
 }
 
 .news-title {
   margin-bottom: 30px;
+  margin-top: 70px;
 }
 
-.news {
-  padding: 0 100px 120px 100px;
+.news-img {
+  margin-bottom: 10px;
+  width: 80%;
+}
+
+@media only screen and (min-width: 768px) {
+  .news-img {
+    width: 55%;
+  }
 }
 
 .mrt {
