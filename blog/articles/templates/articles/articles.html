@@ -9,7 +9,7 @@
 {% for article in articles %}
 <div class="articles">
   <h2>
-    <a href="{% url 'articles:detail' slug=article.slug %}">{{ article.get_title | linebreaks }}</a>
+    <a class="link" href="{% url 'articles:detail' slug=article.slug %}">{{ article.get_title | linebreaks }}</a>
   </h2>
   <a target="_blank" href="{% url 'articles:detail' slug=article.slug %}">
     <img class="thumbnail-img" src="{{ article.image.url }}" alt="{{ article.title }}"> 
@@ -26,15 +26,15 @@
 <div class="footer-basic">
   <footer>
     <p class="copyright">
-      <a href="https://github.com/dori-dev">محمد دری</a> - 2022
+      <a class="link" href="https://github.com/dori-dev">محمد دری</a> - 2022
     </p>
     <p class="copyright">کپی از مطالب کاملا آزاد است!</p>
-    <p class="copyright">تلفن: <a href="tel:09013128010">09013128010</a></p>
+    <p class="copyright">تلفن: <a class="link" href="tel:09013128010">09013128010</a></p>
     <p class="copyright">ایمیل:
-      <a href="mailto:mr.dori.dev@gmail.com">mr.dori.dev@gmail.com</a>
+      <a class="link" href="mailto:mr.dori.dev@gmail.com">mr.dori.dev@gmail.com</a>
     </p>
     <p class="copyright">گیت هاب:
-      <a href="https://github.com/dori-dev">https://github.com/dori-dev</a>
+      <a class="link" href="https://github.com/dori-dev">https://github.com/dori-dev</a>
     </p>
   </footer>
 </div>

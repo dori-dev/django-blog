@@ -20,15 +20,15 @@ body {
   font-weight: normal;
 }
 
-a {
+.link {
   color: #007bff;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 
-a:hover,
-a:visited {
+.link:hover,
+.link:visited {
   color: #0056b3;
   text-decoration: underline;
 }
