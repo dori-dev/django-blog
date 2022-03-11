@@ -6,7 +6,7 @@
 <h1 class="page-label">ورود</h1>
 
 {% if next or request.GET.next %}
-<h2 class="warning">برای ایجاد مقاله ابتدا باید وارد حساب کاربری شوید</h2>
+<h2 class="warning">برای "ایجاد مقاله" ابتدا باید <b style="color: #0275d8;">وارد</b> شوید یا <a style="text-decoration: none;" href="{% url 'accounts:register' %}"><b style="color: #42ba96;">ثبت نام</b></a> کنید</h2>
 {% endif %}
     
 <form class="auth-form" action="{% url 'accounts:login' %}" method="post">
@@ -51,7 +51,6 @@
     {% if next %}
     <input type="hidden" name="next" value="{{ page }}">
     {% endif %}
-    <br>
     <div style="margin-top: 60px;">
         <h3 style="margin-bottom: 15px;">اگر حساب کاربری <b>ندارید</b> در سایت ثبت نام کنید</h3>
         <a href="{% url 'accounts:register' %}">
