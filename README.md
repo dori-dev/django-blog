@@ -2,11 +2,5 @@
 
 Create beautiful blog with django.
 
-- [ ] add new hint for todoapp in login
-- [ ] each style file with block for each html code
-- [ ] add TODO page
-- [ ] make fake user and articles with selenium
-- [ ] add fake article in admin panel for easy select author
-- [ ] apply test on blog
-- [ ] add footer for todo app
+- [ ] make user and articles with selenium for test with admin panel(easy way)
 - [ ] test site in mobile and desktop in firfox, safary and chrome
