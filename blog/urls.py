@@ -14,6 +14,7 @@ urlpatterns = [
     path("about/", views.about, name="about"),
     path("articles/", include("articles.urls")),
     path("accounts/", include("accounts.urls")),
+    path("todo/", include("todoapp.urls")),
     path("news/", views.news, name="news"),
     path("<slug>/", views.error),
 ]

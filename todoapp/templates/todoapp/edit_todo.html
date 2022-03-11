@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}اضافه کردن کار{% endblock title %}
+
+
+{% block content %}
+<div class="container create-form-container">
+    <h1>تغییر دادن تسک</h1>
+    <form class="create-todo-form" action="" method="post">
+        <div class="input-container">
+            <label for="">عنوان کار</label>
+            <input type="text" class="form-control" name="work" value="{{ work }}" maxlength="90" required id="id_work" placeholder="کاری که میخواهی انجام بدی مثلا مرتب کردن اتاق">
+        </div>
+        <div class="input-container">
+            <label for="">زمان(اختیاری)</label>
+            <input type="text" class="form-control" name="date" value="{{ date }}" maxlength="50" id="id_date" placeholder="زمان انجام این کار مثلا چهارشنبه عصر">
+        </div>
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary neighbor-btn large-btn">آپدیت کردن</button>
+        <a href="{% url 'todoapp:todo_list' %}">
+            <button type="button" class="btn btn-danger large-btn">انصراف</button>
+        </a>
+    </form>
+</div>
+{% endblock content %}

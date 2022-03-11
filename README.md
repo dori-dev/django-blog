@@ -2,6 +2,7 @@
 
 Create beautiful blog with django.
 
+- [ ] each style file with block for each html code
 - [ ] add TODO page
 - [ ] make fake user and articles with selenium
 - [ ] add fake article in admin panel for easy select author
