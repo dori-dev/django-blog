@@ -10,16 +10,34 @@
 
 {% block content %}
 
+{% if todo_length == 0 %}
+<div style="margin-bottom: 45px;">
+    <h1 style="margin-bottom: 10px; margin-top: 25px" >کاری برای انجام دادن نداری!</h1>
+    <a style="font-size: 24px; color: black; background-color: white;" class='btn btn-outline-dark add-task btn-sm' href="{% url 'todoapp:create_todo' %}">ایجاد کار جدید <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="" class="bi bi-plus-lg" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+      </svg>
+    </a>
+</div>
+<h3>اینجا میتونی کارهایی که داری رو بنویسی و به صورت لیست داشته باشی.</h3>
+<h3>برای کارهات زمان تعیین کنی و بعد از اتمام تیک شون بزنی.</h3>
+
+<h3 style="margin-top: 40px; margin-bottom: 10px;">داشتن لیست کارها <b>سه</b> مزیت مفید داره</h3>
+<h4>1. کارهات رو مینویسی و به همین واسطه، ذهن ات <b>آزاد</b> میشه و <b>تمرکز</b> ات هم بالا میره!</h4>
+<h4>2. بعد از اتمام کار <b>تیک</b> اش میزنی و ذهن ات <b>لذت</b> میبره که اون کار رو تموم کرده!</h4>
+<h4>3.  وقتی <b>لیست</b> کل کارهات رو داری،میدونی میخوای چیکار کنی و <b>زمان</b> ات رو <b>مدیریت</b> میکنی!</h4>
+<div class="how-to-use">
+  <h3 style="margin-top: 40px;"><b>نحوه استفاده</b></h3>
+  <h4 style="line-height: 1.5;margin-top: 10px;">
+      برای افزودن کار روی
+      <a href="{% url 'todoapp:create_todo' %}">ایجاد کار جدید +</a> کلیک کن سپس <b>عنوان کار</b> و <b>زمان</b> مورد نظرت را
+      بنویس و بر روی دکمه <b>اضافه کردن</b> بزن،لیست کارهایت در صفحه <a href="{% url 'todoapp:todo_list' %}">همین صفحه</a> ذخیره میشوند، بعد از اتمام کار میتونی اون رو <b>تیک بزنی</b> یا
+      از لیست ات <b>پاک</b> اش کنی، اگر هم موقع اضافه کردن اشتباهی کردی میتونی مشخصات کار رو <b>تغییر</b> بدی.
+  </h4>
+</div>
+<h3 style="text-align: center; margin: 40px 0; margin-bottom: 100px;">امیدوارم با این سایت بتونی تمام کارهات رو به خوبی مدیریت کنی :)</h3>
+
+{% else %}
 <div class="list-container">
-    {% if todo_length == 0 %}
-    <div>
-        <h1>کاری برای انجام دادن نداری!</h1>
-        <a style="font-size: 30px;" class='btn btn-light add-task' href="{% url 'todoapp:create_todo' %}">ایجاد کار جدید <svg style="color: black;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" class="bi bi-plus-lg" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
-          </svg>
-        </a>
-    </div>
-    {% else %}
     <div class="todo-list-container">
         <form action="{% url 'todoapp:todo_list' %}" method="post" id="todo-list-form">
             <div class="todo-list">
@@ -64,42 +82,8 @@
             {% csrf_token %}
         </form>
     </div>
-    {% endif %}
 </div>
-
-
-
-<!-- TODO fix it -->
-
-<h3>اینجا میتونی کارهایی که داری رو بنویسی و به صورت لیست داشته باشی.</h3>
-<h3>برای کارهات زمان تعیین کنی و بعد از اتمام تیک شون بزنی.</h3>
-
-<h3 style="margin-top: 40px; margin-bottom: 10px;">داشتن لیست کارها <b>سه</b> مزیت مفید داره</h3>
-<h4>1. کارهات رو مینویسی و به همین واسطه، ذهن ات <b>آزاد</b> میشه و <b>تمرکز</b> ات هم بالا میره!</h4>
-<h4>2. بعد از اتمام کار <b>تیک</b> اش میزنی و ذهن ات <b>لذت</b> میبره که اون کار رو تموم کرده!</h4>
-<h4>3.  وقتی <b>لیست</b> کل کارهات رو داری،میدونی میخوای چیکار کنی و <b>زمان</b> ات رو <b>مدیریت</b> میکنی!</h4>
-<div class="how-to-use">
-  <h3 style="margin-top: 40px;"><b>نحوه استفاده</b></h3>
-  <h4 style="line-height: 1.5;margin-top: 10px;">
-      برای افزودن کار روی
-      <a href="{% url 'todoapp:create_todo' %}">ایجاد کار جدید +</a> کلیک کن سپس <b>عنوان کار</b> و <b>زمان</b> مورد نظرت را
-      بنویس و بر روی دکمه <b>اضافه کردن</b> بزن،لیست کارهایت در صفحه <a href="{% url 'todoapp:todo_list' %}">همین صفحه</a> ذخیره میشوند، بعد از اتمام کار میتونی اون رو <b>تیک بزنی</b> یا
-      از لیست ات <b>پاک</b> اش کنی، اگر هم موقع اضافه کردن اشتباهی کردی میتونی مشخصات کار رو <b>تغییر</b> بدی.
-  </h4>
-</div>
-<h3 style="text-align: center; margin: 40px 0; margin-bottom: 100px;">امیدوارم با این سایت بتونی تمام کارهات رو به خوبی مدیریت کنی :)</h3>
-
-
-
-
-
-
-
-
-
-
-
-
+{% endif %}
 
 <script>
     let checkInput = document.getElementsByName("checked");

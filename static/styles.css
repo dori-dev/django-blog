@@ -18,7 +18,8 @@ body {
   font-weight: normal;
 }
 
-.link {
+.link,
+.how-to-use a {
   color: #007bff;
   text-decoration: none;
   background-color: transparent;
@@ -26,7 +27,9 @@ body {
 }
 
 .link:hover,
-.link:visited {
+.link:visited,
+.how-to-use a:hover,
+.how-to-use a:visited {
   color: #0056b3;
   text-decoration: underline;
 }
@@ -288,7 +291,6 @@ body {
 .mrt {
   margin-top: 15px;
 }
-
 
 .custom-nav {
   margin-left: 3px;
