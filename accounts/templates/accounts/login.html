@@ -6,9 +6,21 @@
 <h1 class="page-label">ورود</h1>
 
 {% if next or request.GET.next %}
+
+
+{% if page == "/todo/" or request.GET.next == "/todo/" %}
+<h2 class="warning">برای "مدیریت کارها" ابتدا <b style="color: #0275d8;">وارد</b> شوید یا <a style="text-decoration: none;" href="{% url 'accounts:register' %}"><b style="color: #42ba96;">ثبت نام</b></a> کنید</h2>
+{% endif %}
+
+
+{% if page == "/articles/create/" or request.GET.next == "/articles/create/" %}
 <h2 class="warning">برای "ایجاد مقاله" ابتدا باید <b style="color: #0275d8;">وارد</b> شوید یا <a style="text-decoration: none;" href="{% url 'accounts:register' %}"><b style="color: #42ba96;">ثبت نام</b></a> کنید</h2>
 {% endif %}
-    
+
+
+
+{% endif %}
+
 <form class="auth-form" action="{% url 'accounts:login' %}" method="post">
     {% if form.errors %}
     <div class="error">
