@@ -9,6 +9,7 @@
     
     <!-- TODO add "block" for custom style for each page -->
     <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <link rel="stylesheet" href="{% block style %}{% endblock %}">
     <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
     <title>{% block title %}{% endblock %}</title>
   </head>
@@ -32,7 +33,7 @@
             </li>
             <!-- TODO -->
             <li class="nav-item">
-              <a class="nav-link active custom-nav" aria-current="page" href="">مدیریت کارها</a>
+              <a class="nav-link active custom-nav" aria-current="page" href="{% url 'todoapp:todo_list' %}">مدیریت کارها</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active custom-nav" aria-current="page" href="{% url 'about' %}">درباره من</a>
