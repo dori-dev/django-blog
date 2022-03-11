@@ -41,15 +41,15 @@
             <form action="{% url 'accounts:logout' %}" method="post">
               {% csrf_token %}
               <li class="nav-item">
-                <button class="btn nav-link active custom-nav" aria-current="page" style="color: #333333; font-size: large;">خروج از حساب</button>
+                <button class="btn nav-link active custom-nav" aria-current="page" style="color: #333333; font-size: 19px;">خروج از حساب</button>
               </li>
             </form>
             {% else %}
             <li class="nav-item">
-              <a style="color: #494949;" class="nav-link active custom-nav" aria-current="page" href="{% url 'accounts:register' %}">ثبت نام</a>
+              <a style="color: #333333;" class="nav-link active custom-nav" aria-current="page" href="{% url 'accounts:register' %}">ثبت نام</a>
             </li>
             <li class="nav-item">
-              <a style="color: #494949;" class="nav-link active custom-nav" aria-current="page" href="{% url 'accounts:login' %}">ورود</a>
+              <a style="color: #333333;" class="nav-link active custom-nav" aria-current="page" href="{% url 'accounts:login' %}">ورود</a>
             </li>
             {% endif %}
     
