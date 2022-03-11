@@ -2,6 +2,7 @@
 
 Create beautiful blog with django.
 
+- [ ] add new hint for todoapp in login
 - [ ] each style file with block for each html code
 - [ ] add TODO page
 - [ ] make fake user and articles with selenium

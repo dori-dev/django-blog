@@ -1,7 +1,13 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}اضافه کردن کار{% endblock title %}
 
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'todo.css' %}">
+{% endblock style %}
+    
 
 {% block content %}
 <div class="container create-form-container">

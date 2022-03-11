@@ -9,7 +9,8 @@
     
     <!-- TODO add "block" for custom style for each page -->
     <link rel="stylesheet" href="{% static 'styles.css' %}" />
-    <link rel="stylesheet" href="{% block style %}{% endblock %}">
+    {% block style %}
+    {% endblock %}
     <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
     <title>{% block title %}{% endblock %}</title>
   </head>

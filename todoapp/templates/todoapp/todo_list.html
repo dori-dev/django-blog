@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}لیست کارهای من{% endblock title %}
 
+{% block style %}
+<link rel="stylesheet" href="{% static 'todo.css' %}">
+{% endblock style %}
 
 {% block content %}
 
@@ -65,15 +69,6 @@
 
 
 <!-- TODO fix it -->
-<h1 style="margin-top: 20px;">لیست کارها(ToDo List)</h1>
-
-{% if user.is_authenticated %}
-<h2>سلام <a class="link" href="{% url 'todoapp:todo_list' %}">{{ user }}</a> عزیز :)</h2>
-{% else %}
-<h2>سلام دوست من :)</h2>
-{% endif %}
-
-<br>
 
 <h3>اینجا میتونی کارهایی که داری رو بنویسی و به صورت لیست داشته باشی.</h3>
 <h3>برای کارهات زمان تعیین کنی و بعد از اتمام تیک شون بزنی.</h3>
@@ -85,9 +80,9 @@
 <div class="how-to-use">
   <h3 style="margin-top: 40px;"><b>نحوه استفاده</b></h3>
   <h4 style="line-height: 1.5;margin-top: 10px;">
-      بعد از <a href="{% url 'accounts:register' %}">ثبت نام</a> یا <a href="{% url 'accounts:login' %}">ورود</a> به سایت به صفحه <a href="{% url 'todoapp:todo_list' %}">لیست کارها</a> برو و برای افزودن کار روی
+      برای افزودن کار روی
       <a href="{% url 'todoapp:create_todo' %}">ایجاد کار جدید +</a> کلیک کن سپس <b>عنوان کار</b> و <b>زمان</b> مورد نظرت را
-      بنویس و بر روی دکمه <b>اضافه کردن</b> بزن،لیست کارهایت در صفحه <a href="{% url 'todoapp:todo_list' %}">لیست کارها</a> ذخیره میشوند، بعد از اتمام کار میتونی اون رو <b>تیک بزنی</b> یا
+      بنویس و بر روی دکمه <b>اضافه کردن</b> بزن،لیست کارهایت در صفحه <a href="{% url 'todoapp:todo_list' %}">همین صفحه</a> ذخیره میشوند، بعد از اتمام کار میتونی اون رو <b>تیک بزنی</b> یا
       از لیست ات <b>پاک</b> اش کنی، اگر هم موقع اضافه کردن اشتباهی کردی میتونی مشخصات کار رو <b>تغییر</b> بدی.
   </h4>
 </div>
