@@ -6,7 +6,7 @@ Create beautiful blog with Django & Bootstrap.
 - [ ] make user and articles with selenium for test with admin panel(easy way)
 - [ ] test site in mobile and desktop in firfox, safary and chrome
 - [ ] compressor the image, js, html and css
-
+- [ ] customize bootstrap for my project
 
 #
 ## Tools
