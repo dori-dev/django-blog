@@ -12,7 +12,7 @@ class Article(models.Model):
     slug = models.SlugField("آدرس", unique=True, allow_unicode=True)
     body: str = models.TextField("متن")
     date = models.DateTimeField(auto_now_add=True)
-    image = models.ImageField("عکس", default='default.png')
+    image = models.ImageField("عکس", default='default.jpg')
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def snippet(self):
