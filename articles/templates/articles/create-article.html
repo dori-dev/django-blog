@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}ایجاد مقاله{% endblock title %}
+{% block title %}ایجاد پست{% endblock title %}
 
 
 {% block content %}
@@ -18,10 +18,10 @@
         </ul>
     </div>
     {% endif %}
-    <h1 class="page-label">مقاله مورد نظرت را ایجاد کن</h1>
+    <h1 class="page-label">پست مورد نظرت را ایجاد کن</h1>
     <form class="create-form" action="{% url 'articles:create' %}" method="post" enctype="multipart/form-data">
         <div class="input-container mrt">
-            <label for="id_title">عنوان مقاله</label>
+            <label for="id_title">عنوان پست</label>
             {% if form.title.value %}
             <input type="text" class="form-control" value="{{ form.title.value }}" name="title" maxlength="256" autofocus required id="id_title" placeholder="برای مثال رمز ارز های چگونه پدید آمدند...">
             {% else %}
@@ -32,14 +32,14 @@
         <div class="input-container mrt">
             <label for="id_slug">لینک</label>
             {% if form.slug.value %}
-            <input type="text" class="form-control" value="{{ form.slug.value }}" name="slug" maxlength="50" required id="id_slug" placeholder="آدرس مقاله با توجه به عنوان نوشته میشود که میتونی عوضش کنی!">
+            <input type="text" class="form-control" value="{{ form.slug.value }}" name="slug" maxlength="50" required id="id_slug" placeholder="آدرس پست با توجه به عنوان نوشته میشود که میتونی عوضش کنی!">
             {% else %}
-            <input type="text" class="form-control" name="slug" maxlength="50" required id="id_slug" placeholder="آدرس مقاله با توجه به عنوان نوشته میشود که میتونی عوضش کنی!">
+            <input type="text" class="form-control" name="slug" maxlength="50" required id="id_slug" placeholder="آدرس پست با توجه به عنوان نوشته میشود که میتونی عوضش کنی!">
             {% endif %} 
         </div>
 
         <div class="input-container mrt">
-            <label for="id_body">متن مقاله</label>
+            <label for="id_body">متن پست</label>
             {% if form.body.value %}
             <textarea name="body" class="form-control" cols="40" rows="10" required id="id_body" placeholder="توضیحات و متنی که دوست داری رو اینجا بنویس :)">{{ form.body.value }}</textarea>
             {% else %}
@@ -55,7 +55,7 @@
 
         {% csrf_token %}
         <div class="button-div">
-              <button class="btn btn-primary btn-lg">ایجاد و ذخیره مقاله</button>
+              <button class="btn btn-primary btn-lg">ایجاد و ذخیره پست</button>
         </div>
     </form>
 </div>
